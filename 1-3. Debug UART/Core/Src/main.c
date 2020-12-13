@@ -31,7 +31,15 @@
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-
+int _write(int file, char* p, int len)
+{
+	for(int i=0;i<len;i++)
+	{
+		LL_USART_TransmitData8(USART6,*(p+i));
+		HAL_Delay(1);
+	}
+	return len;
+}
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -46,7 +54,8 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-
+extern uint8_t	uart6_rx_flag;
+extern uint8_t uart6_rx_data;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -67,6 +76,8 @@ void SystemClock_Config(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
+	int count = 0;
+	float f = 1.234;
 
   /* USER CODE END 1 */
 
@@ -103,6 +114,8 @@ int main(void)
 
   LL_TIM_CC_DisableChannel(TIM3, LL_TIM_CHANNEL_CH4);
 
+  LL_USART_EnableIT_RXNE(USART6);
+
 
   /* USER CODE END 2 */
 
@@ -115,7 +128,28 @@ int main(void)
     /* USER CODE BEGIN 3 */
 	  //HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_2);
 	  //LL_GPIO_TogglePin(GPIOC, LL_GPIO_PIN_0|LL_GPIO_PIN_1|LL_GPIO_PIN_2);
-	  LL_USART_TransmitData8(USART6,'A');
+	  //LL_USART_TransmitData8(USART6,'A');
+	  //HAL_Delay(1000);
+//	  if(uart6_rx_flag == 1)
+//	  {
+//		  uart6_rx_flag = 0;
+//		  LL_USART_TransmitData8(USART6,uart6_rx_data);
+//
+//		  switch(uart6_rx_data)
+//		  {
+//		  case '0':
+//			  LL_GPIO_TogglePin(GPIOC, LL_GPIO_PIN_0|LL_GPIO_PIN_1|LL_GPIO_PIN_2);
+//			  break;
+//		  case '1':
+//			  LL_TIM_CC_EnableChannel(TIM3, LL_TIM_CHANNEL_CH4);
+//			  break;
+//		  case '2':
+//		  	  LL_TIM_CC_DisableChannel(TIM3, LL_TIM_CHANNEL_CH4);
+//		  	  break;
+//		  }
+//	  }
+	  //printf("Hello\n");
+	  printf("%d %f\n",count++, f+=0.001);
 	  HAL_Delay(1000);
   }
   /* USER CODE END 3 */

@@ -42,7 +42,8 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN PV */
-
+uint8_t	uart6_rx_flag = 0;
+uint8_t uart6_rx_data = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -203,6 +204,12 @@ void SysTick_Handler(void)
 void USART6_IRQHandler(void)
 {
   /* USER CODE BEGIN USART6_IRQn 0 */
+	if(LL_USART_IsActiveFlag_RXNE(USART6))
+	{
+		LL_USART_ClearFlag_RXNE(USART6); // For HAL, it doens't needs to be clear like this
+		uart6_rx_data = LL_USART_ReceiveData8(USART6);
+		uart6_rx_flag = 1;
+	}
 
   /* USER CODE END USART6_IRQn 0 */
   /* USER CODE BEGIN USART6_IRQn 1 */

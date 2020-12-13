@@ -41,7 +41,7 @@ all: 1-3.\ Debug\ UART.elf secondary-outputs
 
 # Tool invocations
 1-3.\ Debug\ UART.elf: $(OBJS) $(USER_OBJS) D:\FW\drone\1-3.\ Debug\ UART\STM32F405RGTX_FLASH.ld
-	arm-none-eabi-gcc -o "1-3. Debug UART.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\FW\drone\1-3. Debug UART\STM32F405RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="1-3. Debug UART.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+	arm-none-eabi-gcc -o "1-3. Debug UART.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\FW\drone\1-3. Debug UART\STM32F405RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="1-3. Debug UART.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

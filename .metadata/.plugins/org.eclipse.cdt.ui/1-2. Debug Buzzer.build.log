@@ -1,0 +1,10 @@
+15:34:33 **** Incremental Build of configuration Debug for project 1-2. Debug Buzzer ****
+make -j8 all 
+arm-none-eabi-size   1-2.\ Debug\ Buzzer.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8196	     20	   1572	   9788	   263c	1-2. Debug Buzzer.elf
+Finished building: default.size.stdout
+ 
+
+15:34:34 Build Finished. 0 errors, 0 warnings. (took 1s.417ms)
+
