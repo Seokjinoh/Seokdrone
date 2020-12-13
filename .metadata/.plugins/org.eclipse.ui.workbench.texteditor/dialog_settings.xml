@@ -6,8 +6,9 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="IRQ"/>
+		<item key="selection" value="Available"/>
 		<list key="findhistory">
+			<item value="available"/>
 			<item value="irq"/>
 			<item value="TIM3_BASE"/>
 			<item value="Channe4"/>
