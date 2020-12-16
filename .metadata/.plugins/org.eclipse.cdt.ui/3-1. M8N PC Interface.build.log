@@ -1,0 +1,10 @@
+21:38:57 **** Incremental Build of configuration Debug for project 3-1. M8N PC Interface ****
+make -j8 all 
+arm-none-eabi-size   3-1.\ M8N\ PC\ Interface.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30172	    484	   1828	  32484	   7ee4	3-1. M8N PC Interface.elf
+Finished building: default.size.stdout
+ 
+
+21:38:59 Build Finished. 0 errors, 0 warnings. (took 1s.557ms)
+

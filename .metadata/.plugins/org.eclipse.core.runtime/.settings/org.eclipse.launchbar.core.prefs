@@ -1,7 +1,7 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:2-1. BNO080 Debug
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:3-1. M8N PC Interface Debug
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:1-1.\ Debug\ LED\ Debug/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:1-1.\ Debug\ LED\ Debug/activeLaunchTarget=null\:---
@@ -10,3 +10,9 @@ org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:1-2.\ Debug\ Buzzer\ Debug/acti
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:1-3.\ Debug\ UART\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:1-3.\ Debug\ UART\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:2-1.\ BNO080\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:2-2.\ ICM20602\ Debug/activeLaunchMode=debug
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:2-2.\ ICM20602\ Debug/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:2-3.\ LPS22HH\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:2-3.\ LPS22HH\ Debug/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:3-1.\ M8N\ PC\ Interface\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:3-1.\ M8N\ PC\ Interface\ Debug/activeLaunchTarget=null\:---

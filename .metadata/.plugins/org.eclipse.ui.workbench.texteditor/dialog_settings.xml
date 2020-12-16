@@ -8,6 +8,7 @@
 		<item key="isRegEx" value="false"/>
 		<item key="selection" value="Available"/>
 		<list key="findhistory">
+			<item value="gyro_z_raw"/>
 			<item value="available"/>
 			<item value="irq"/>
 			<item value="TIM3_BASE"/>

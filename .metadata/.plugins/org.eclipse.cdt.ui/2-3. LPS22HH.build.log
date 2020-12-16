@@ -1,0 +1,94 @@
+20:45:09 **** Incremental Build of configuration Debug for project 2-3. LPS22HH ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:62:0: warning: "CHIP_SELECT" redefined
+ #define CHIP_SELECT(ICM20602)  LL_GPIO_ResetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:30:0:
+../Core/Inc/BNO080.h:85:0: note: this is the location of the previous definition
+ #define CHIP_SELECT(BNO080)  LL_GPIO_ResetOutputPin(BNO080_SPI_CS_PORT, BNO080_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:63:0: warning: "CHIP_DESELECT" redefined
+ #define CHIP_DESELECT(ICM20602)  LL_GPIO_SetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:30:0:
+../Core/Inc/BNO080.h:86:0: note: this is the location of the previous definition
+ #define CHIP_DESELECT(BNO080) LL_GPIO_SetOutputPin(BNO080_SPI_CS_PORT, BNO080_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:63:0: warning: "CHIP_SELECT" redefined
+ #define CHIP_SELECT(LPS22HH)  LL_GPIO_ResetOutputPin(LPS22HH_SPI_CS_PORT, LPS22HH_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:62:0: note: this is the location of the previous definition
+ #define CHIP_SELECT(ICM20602)  LL_GPIO_ResetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:64:0: warning: "CHIP_DESELECT" redefined
+ #define CHIP_DESELECT(LPS22HH)  LL_GPIO_SetOutputPin(LPS22HH_SPI_CS_PORT, LPS22HH_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:63:0: note: this is the location of the previous definition
+ #define CHIP_DESELECT(ICM20602)  LL_GPIO_SetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:77:0: warning: "WHO_AM_I" redefined
+ #define WHO_AM_I  0x0F
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:130:0: note: this is the location of the previous definition
+ #define WHO_AM_I 0x75 //The default value of the register is 0x12.
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:96:0: warning: "TEMP_OUT_L" redefined
+ #define TEMP_OUT_L  0x2B
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:109:0: note: this is the location of the previous definition
+ #define TEMP_OUT_L 0x42
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:97:0: warning: "TEMP_OUT_H" redefined
+ #define TEMP_OUT_H  0x2C
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:108:0: note: this is the location of the previous definition
+ #define TEMP_OUT_H 0x41
+ 
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:177:5: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+     printf("%d, %d\n", (int)(LPS22HH.baroAlt*100),(int)(LPS22HH.baroAltFilt*100));
+     ^~~~~~
+../Core/Src/main.c:177:5: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:177:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Core/Src/main.c:86:8: warning: unused variable 'quatRadianAccuray' [-Wunused-variable]
+  float quatRadianAccuray;
+        ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:85:8: warning: unused variable 'q' [-Wunused-variable]
+  float q[4];
+        ^
+../Core/Src/main.c:84:8: warning: unused variable 'f' [-Wunused-variable]
+  float f = 1.234;
+        ^
+../Core/Src/main.c:83:6: warning: unused variable 'count' [-Wunused-variable]
+  int count = 0;
+      ^~~~~
+arm-none-eabi-gcc -o "2-3. LPS22HH.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\FW\drone\2-3. LPS22HH\STM32F405RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="2-3. LPS22HH.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 2-3. LPS22HH.elf
+ 
+arm-none-eabi-objdump -h -S  2-3.\ LPS22HH.elf  > "2-3. LPS22HH.list"
+arm-none-eabi-objcopy  -O binary  2-3.\ LPS22HH.elf  "2-3. LPS22HH.bin"
+arm-none-eabi-size   2-3.\ LPS22HH.elf 
+   text	   data	    bss	    dec	    hex	filename
+  33080	    488	   1840	  35408	   8a50	2-3. LPS22HH.elf
+Finished building: default.size.stdout
+ 
+Finished building: 2-3. LPS22HH.bin
+ 
+Finished building: 2-3. LPS22HH.list
+ 
+
+20:45:12 Build Finished. 0 errors, 13 warnings. (took 3s.362ms)
+
