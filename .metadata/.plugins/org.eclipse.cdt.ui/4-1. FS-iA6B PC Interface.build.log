@@ -1,0 +1,10 @@
+12:11:57 **** Incremental Build of configuration Debug for project 4-1. FS-iA6B PC Interface ****
+make -j8 all 
+arm-none-eabi-size   4-1.\ FS-iA6B\ PC\ Interface.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31428	    484	   1956	  33868	   844c	4-1. FS-iA6B PC Interface.elf
+Finished building: default.size.stdout
+ 
+
+12:11:58 Build Finished. 0 errors, 0 warnings. (took 1s.239ms)
+

@@ -3,11 +3,14 @@
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
-		<item key="wholeword" value="false"/>
+		<item key="wholeword" value="true"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="Available"/>
+		<item key="selection" value="count"/>
 		<list key="findhistory">
+			<item value="count"/>
+			<item value="quatRadianAccuray"/>
+			<item value="q"/>
 			<item value="gyro_z_raw"/>
 			<item value="available"/>
 			<item value="irq"/>

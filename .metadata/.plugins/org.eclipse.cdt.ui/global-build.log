@@ -2337,3 +2337,2014 @@ arm-none-eabi-size   3-1.\ M8N\ PC\ Interface.elf
   30172	    484	   1828	  32484	   7ee4	3-1. M8N PC Interface.elf
 Finished building: default.size.stdout
  
+11:38:43 **** Build of configuration Debug for project 4-1. FS-iA6B PC Interface ****
+make -j8 all 
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dma.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_tim.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usart.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usart.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.o"
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Startup/startup_stm32f405rgtx.o" "../Core/Startup/startup_stm32f405rgtx.s"
+arm-none-eabi-gcc "../Core/Src/BNO080.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/BNO080.d" -MT"Core/Src/BNO080.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/BNO080.o"
+../Core/Src/BNO080.c: In function 'BNO080_Initialization':
+../Core/Src/BNO080.c:166:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf("Checking BNO080...");
+  ^~~~~~
+../Core/Src/BNO080.c:166:2: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/BNO080.c:166:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Core/Src/BNO080.c: In function 'BNO080_readFRSdata':
+../Core/Src/BNO080.c:708:4: warning: incompatible implicit declaration of built-in function 'printf'
+    printf("metaData array over run. Returning.");
+    ^~~~~~
+../Core/Src/BNO080.c:708:4: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Core/Src/BNO080.c: In function 'BNO080_waitForSPI':
+../Core/Src/BNO080.c:1007:2: warning: incompatible implicit declaration of built-in function 'printf'
+  printf("\nData not available\n");
+  ^~~~~~
+../Core/Src/BNO080.c:1007:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+arm-none-eabi-gcc "../Core/Src/FS-iA6B.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/FS-iA6B.d" -MT"Core/Src/FS-iA6B.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/FS-iA6B.o"
+arm-none-eabi-gcc "../Core/Src/ICM20602.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/ICM20602.d" -MT"Core/Src/ICM20602.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ICM20602.o"
+arm-none-eabi-gcc "../Core/Src/LPS22HH.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/LPS22HH.d" -MT"Core/Src/LPS22HH.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/LPS22HH.o"
+arm-none-eabi-gcc "../Core/Src/M8N.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/M8N.d" -MT"Core/Src/M8N.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/M8N.o"
+arm-none-eabi-gcc "../Core/Src/Quaternion.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/Quaternion.d" -MT"Core/Src/Quaternion.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/Quaternion.o"
+arm-none-eabi-gcc "../Core/Src/gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/gpio.d" -MT"Core/Src/gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/gpio.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/ICM20602.c: In function 'ICM20602_Initialization':
+../Core/Src/ICM20602.c:158:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf("Checking ICM20602...");
+  ^~~~~~
+../Core/Src/ICM20602.c:158:2: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/ICM20602.c:158:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Core/Src/ICM20602.c:154:10: warning: unused variable 'gyro_raw_data' [-Wunused-variable]
+  int16_t gyro_raw_data[3] = {0};   // To remove offset
+          ^~~~~~~~~~~~~
+../Core/Src/ICM20602.c:153:10: warning: unused variable 'accel_raw_data' [-Wunused-variable]
+  int16_t accel_raw_data[3] = {0};  // To remove offset
+          ^~~~~~~~~~~~~~
+In file included from ../Core/Src/M8N.c:8:0:
+../Core/Inc/M8N.h:34:1: warning: useless type name in empty declaration
+ extern M8N_UBX_NAV_POSLLH;
+ ^~~~~~
+../Core/Src/M8N.c: In function 'M8N_UBX_Initialization':
+../Core/Src/M8N.c:32:19: warning: passing argument 1 of 'M8N_UBX_dataSend' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  M8N_UBX_dataSend(&UBX_CFG_PRT[0],sizeof(UBX_CFG_PRT));
+                   ^
+In file included from ../Core/Src/M8N.c:8:0:
+../Core/Inc/M8N.h:39:6: note: expected 'unsigned char *' but argument is of type 'const unsigned char *'
+ void M8N_UBX_dataSend(unsigned char* data, unsigned char len);
+      ^~~~~~~~~~~~~~~~
+../Core/Src/M8N.c:34:19: warning: passing argument 1 of 'M8N_UBX_dataSend' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  M8N_UBX_dataSend(&UBX_CFG_MSG[0],sizeof(UBX_CFG_MSG));
+                   ^
+In file included from ../Core/Src/M8N.c:8:0:
+../Core/Inc/M8N.h:39:6: note: expected 'unsigned char *' but argument is of type 'const unsigned char *'
+ void M8N_UBX_dataSend(unsigned char* data, unsigned char len);
+      ^~~~~~~~~~~~~~~~
+../Core/Src/M8N.c:36:19: warning: passing argument 1 of 'M8N_UBX_dataSend' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  M8N_UBX_dataSend(&UBX_CFG_RATE[0],sizeof(UBX_CFG_RATE));
+                   ^
+In file included from ../Core/Src/M8N.c:8:0:
+../Core/Inc/M8N.h:39:6: note: expected 'unsigned char *' but argument is of type 'const unsigned char *'
+ void M8N_UBX_dataSend(unsigned char* data, unsigned char len);
+      ^~~~~~~~~~~~~~~~
+../Core/Src/M8N.c:38:19: warning: passing argument 1 of 'M8N_UBX_dataSend' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  M8N_UBX_dataSend(&UBX_CFG_CFG[0],sizeof(UBX_CFG_CFG));
+                   ^
+In file included from ../Core/Src/M8N.c:8:0:
+../Core/Inc/M8N.h:39:6: note: expected 'unsigned char *' but argument is of type 'const unsigned char *'
+ void M8N_UBX_dataSend(unsigned char* data, unsigned char len);
+      ^~~~~~~~~~~~~~~~
+../Core/Src/LPS22HH.c: In function 'LPS22HH_Initialization':
+../Core/Src/LPS22HH.c:160:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf("Checking LPS22HH...");
+  ^~~~~~
+../Core/Src/LPS22HH.c:160:2: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/LPS22HH.c:160:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:62:0: warning: "CHIP_SELECT" redefined
+ #define CHIP_SELECT(ICM20602)  LL_GPIO_ResetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:30:0:
+../Core/Inc/BNO080.h:85:0: note: this is the location of the previous definition
+ #define CHIP_SELECT(BNO080)  LL_GPIO_ResetOutputPin(BNO080_SPI_CS_PORT, BNO080_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:63:0: warning: "CHIP_DESELECT" redefined
+ #define CHIP_DESELECT(ICM20602)  LL_GPIO_SetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:30:0:
+../Core/Inc/BNO080.h:86:0: note: this is the location of the previous definition
+ #define CHIP_DESELECT(BNO080) LL_GPIO_SetOutputPin(BNO080_SPI_CS_PORT, BNO080_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:63:0: warning: "CHIP_SELECT" redefined
+ #define CHIP_SELECT(LPS22HH)  LL_GPIO_ResetOutputPin(LPS22HH_SPI_CS_PORT, LPS22HH_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:62:0: note: this is the location of the previous definition
+ #define CHIP_SELECT(ICM20602)  LL_GPIO_ResetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:64:0: warning: "CHIP_DESELECT" redefined
+ #define CHIP_DESELECT(LPS22HH)  LL_GPIO_SetOutputPin(LPS22HH_SPI_CS_PORT, LPS22HH_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:63:0: note: this is the location of the previous definition
+ #define CHIP_DESELECT(ICM20602)  LL_GPIO_SetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:77:0: warning: "WHO_AM_I" redefined
+ #define WHO_AM_I  0x0F
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:130:0: note: this is the location of the previous definition
+ #define WHO_AM_I 0x75 //The default value of the register is 0x12.
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:96:0: warning: "TEMP_OUT_L" redefined
+ #define TEMP_OUT_L  0x2B
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:109:0: note: this is the location of the previous definition
+ #define TEMP_OUT_L 0x42
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:97:0: warning: "TEMP_OUT_H" redefined
+ #define TEMP_OUT_H  0x2C
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:108:0: note: this is the location of the previous definition
+ #define TEMP_OUT_H 0x41
+ 
+In file included from ../Core/Src/main.c:34:0:
+../Core/Inc/M8N.h:34:1: warning: useless type name in empty declaration
+ extern M8N_UBX_NAV_POSLLH;
+ ^~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:161:5: error: 'q' undeclared (first use in this function)
+     q[0] = BNO080_getQuatI();
+     ^
+../Core/Src/main.c:161:5: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:165:5: error: 'quatRadianAccuray' undeclared (first use in this function)
+     quatRadianAccuray = BNO080_getQuatAccuracy();
+     ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:169:5: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+     printf("%d,%d\n",(int)(BNO080_Roll*100),(int)(BNO080_Pitch*100));
+     ^~~~~~
+../Core/Src/main.c:169:5: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:169:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+make: *** [Core/Src/subdir.mk:77: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+11:41:39 **** Incremental Build of configuration Debug for project 4-1. FS-iA6B PC Interface ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/spi.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/spi.d" -MT"Core/Src/spi.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/spi.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+arm-none-eabi-gcc "../Core/Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/syscalls.d" -MT"Core/Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/syscalls.o"
+arm-none-eabi-gcc "../Core/Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/sysmem.d" -MT"Core/Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/sysmem.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32f4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/system_stm32f4xx.d" -MT"Core/Src/system_stm32f4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32f4xx.o"
+arm-none-eabi-gcc "../Core/Src/tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/tim.d" -MT"Core/Src/tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/tim.o"
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:62:0: warning: "CHIP_SELECT" redefined
+ #define CHIP_SELECT(ICM20602)  LL_GPIO_ResetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:30:0:
+../Core/Inc/BNO080.h:85:0: note: this is the location of the previous definition
+ #define CHIP_SELECT(BNO080)  LL_GPIO_ResetOutputPin(BNO080_SPI_CS_PORT, BNO080_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:63:0: warning: "CHIP_DESELECT" redefined
+ #define CHIP_DESELECT(ICM20602)  LL_GPIO_SetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:30:0:
+../Core/Inc/BNO080.h:86:0: note: this is the location of the previous definition
+ #define CHIP_DESELECT(BNO080) LL_GPIO_SetOutputPin(BNO080_SPI_CS_PORT, BNO080_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:63:0: warning: "CHIP_SELECT" redefined
+ #define CHIP_SELECT(LPS22HH)  LL_GPIO_ResetOutputPin(LPS22HH_SPI_CS_PORT, LPS22HH_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:62:0: note: this is the location of the previous definition
+ #define CHIP_SELECT(ICM20602)  LL_GPIO_ResetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:64:0: warning: "CHIP_DESELECT" redefined
+ #define CHIP_DESELECT(LPS22HH)  LL_GPIO_SetOutputPin(LPS22HH_SPI_CS_PORT, LPS22HH_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:63:0: note: this is the location of the previous definition
+ #define CHIP_DESELECT(ICM20602)  LL_GPIO_SetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:77:0: warning: "WHO_AM_I" redefined
+ #define WHO_AM_I  0x0F
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:130:0: note: this is the location of the previous definition
+ #define WHO_AM_I 0x75 //The default value of the register is 0x12.
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:96:0: warning: "TEMP_OUT_L" redefined
+ #define TEMP_OUT_L  0x2B
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:109:0: note: this is the location of the previous definition
+ #define TEMP_OUT_L 0x42
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:97:0: warning: "TEMP_OUT_H" redefined
+ #define TEMP_OUT_H  0x2C
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:108:0: note: this is the location of the previous definition
+ #define TEMP_OUT_H 0x41
+ 
+In file included from ../Core/Src/main.c:34:0:
+../Core/Inc/M8N.h:34:1: warning: useless type name in empty declaration
+ extern M8N_UBX_NAV_POSLLH;
+ ^~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:169:5: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+     printf("%d,%d\n",(int)(BNO080_Roll*100),(int)(BNO080_Pitch*100));
+     ^~~~~~
+../Core/Src/main.c:169:5: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:169:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Core/Src/main.c:95:8: warning: variable 'quatRadianAccuray' set but not used [-Wunused-but-set-variable]
+  float quatRadianAccuray;
+        ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:93:8: warning: unused variable 'f' [-Wunused-variable]
+  float f = 1.234;
+        ^
+../Core/Src/main.c:92:6: warning: unused variable 'count' [-Wunused-variable]
+  int count = 0;
+      ^~~~~
+arm-none-eabi-gcc "../Core/Src/usart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/usart.d" -MT"Core/Src/usart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/usart.o"
+arm-none-eabi-gcc -o "4-1. FS-iA6B PC Interface.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\FW\stm32drone\4-1. FS-iA6B PC Interface\STM32F405RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="4-1. FS-iA6B PC Interface.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 4-1. FS-iA6B PC Interface.elf
+ 
+arm-none-eabi-size   4-1.\ FS-iA6B\ PC\ Interface.elf 
+arm-none-eabi-objdump -h -S  4-1.\ FS-iA6B\ PC\ Interface.elf  > "4-1. FS-iA6B PC Interface.list"
+arm-none-eabi-objcopy  -O binary  4-1.\ FS-iA6B\ PC\ Interface.elf  "4-1. FS-iA6B PC Interface.bin"
+   text	   data	    bss	    dec	    hex	filename
+  37416	    492	   1916	  39824	   9b90	4-1. FS-iA6B PC Interface.elf
+Finished building: default.size.stdout
+ 
+Finished building: 4-1. FS-iA6B PC Interface.bin
+ 
+Finished building: 4-1. FS-iA6B PC Interface.list
+ 
+11:41:46 **** Incremental Build of configuration Debug for project 4-1. FS-iA6B PC Interface ****
+make -j8 all 
+arm-none-eabi-size   4-1.\ FS-iA6B\ PC\ Interface.elf 
+   text	   data	    bss	    dec	    hex	filename
+  37416	    492	   1916	  39824	   9b90	4-1. FS-iA6B PC Interface.elf
+Finished building: default.size.stdout
+ 
+11:43:37 **** Incremental Build of configuration Debug for project 4-1. FS-iA6B PC Interface ****
+make -j8 all 
+arm-none-eabi-size   4-1.\ FS-iA6B\ PC\ Interface.elf 
+   text	   data	    bss	    dec	    hex	filename
+  37416	    492	   1916	  39824	   9b90	4-1. FS-iA6B PC Interface.elf
+Finished building: default.size.stdout
+ 
+11:44:24 **** Incremental Build of configuration Debug for project 4-1. FS-iA6B PC Interface ****
+make -j8 all 
+arm-none-eabi-size   4-1.\ FS-iA6B\ PC\ Interface.elf 
+   text	   data	    bss	    dec	    hex	filename
+  37416	    492	   1916	  39824	   9b90	4-1. FS-iA6B PC Interface.elf
+Finished building: default.size.stdout
+ 
+11:46:56 **** Incremental Build of configuration Debug for project 4-1. FS-iA6B PC Interface ****
+make -j8 all 
+arm-none-eabi-size   4-1.\ FS-iA6B\ PC\ Interface.elf 
+   text	   data	    bss	    dec	    hex	filename
+  37416	    492	   1916	  39824	   9b90	4-1. FS-iA6B PC Interface.elf
+Finished building: default.size.stdout
+ 
+11:57:15 **** Incremental Build of configuration Debug for project 4-1. FS-iA6B PC Interface ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:62:0: warning: "CHIP_SELECT" redefined
+ #define CHIP_SELECT(ICM20602)  LL_GPIO_ResetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:30:0:
+../Core/Inc/BNO080.h:85:0: note: this is the location of the previous definition
+ #define CHIP_SELECT(BNO080)  LL_GPIO_ResetOutputPin(BNO080_SPI_CS_PORT, BNO080_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:63:0: warning: "CHIP_DESELECT" redefined
+ #define CHIP_DESELECT(ICM20602)  LL_GPIO_SetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:30:0:
+../Core/Inc/BNO080.h:86:0: note: this is the location of the previous definition
+ #define CHIP_DESELECT(BNO080) LL_GPIO_SetOutputPin(BNO080_SPI_CS_PORT, BNO080_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:63:0: warning: "CHIP_SELECT" redefined
+ #define CHIP_SELECT(LPS22HH)  LL_GPIO_ResetOutputPin(LPS22HH_SPI_CS_PORT, LPS22HH_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:62:0: note: this is the location of the previous definition
+ #define CHIP_SELECT(ICM20602)  LL_GPIO_ResetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:64:0: warning: "CHIP_DESELECT" redefined
+ #define CHIP_DESELECT(LPS22HH)  LL_GPIO_SetOutputPin(LPS22HH_SPI_CS_PORT, LPS22HH_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:63:0: note: this is the location of the previous definition
+ #define CHIP_DESELECT(ICM20602)  LL_GPIO_SetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:77:0: warning: "WHO_AM_I" redefined
+ #define WHO_AM_I  0x0F
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:130:0: note: this is the location of the previous definition
+ #define WHO_AM_I 0x75 //The default value of the register is 0x12.
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:96:0: warning: "TEMP_OUT_L" redefined
+ #define TEMP_OUT_L  0x2B
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:109:0: note: this is the location of the previous definition
+ #define TEMP_OUT_L 0x42
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:97:0: warning: "TEMP_OUT_H" redefined
+ #define TEMP_OUT_H  0x2C
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:108:0: note: this is the location of the previous definition
+ #define TEMP_OUT_H 0x41
+ 
+In file included from ../Core/Src/main.c:34:0:
+../Core/Inc/M8N.h:34:1: warning: useless type name in empty declaration
+ extern M8N_UBX_NAV_POSLLH;
+ ^~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:170:5: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+     printf("%d\n",(int)(BNO080_Yaw*100));
+     ^~~~~~
+../Core/Src/main.c:170:5: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:170:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Core/Src/main.c:95:8: warning: variable 'quatRadianAccuray' set but not used [-Wunused-but-set-variable]
+  float quatRadianAccuray;
+        ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:93:8: warning: unused variable 'f' [-Wunused-variable]
+  float f = 1.234;
+        ^
+../Core/Src/main.c:92:6: warning: unused variable 'count' [-Wunused-variable]
+  int count = 0;
+      ^~~~~
+arm-none-eabi-gcc -o "4-1. FS-iA6B PC Interface.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\FW\stm32drone\4-1. FS-iA6B PC Interface\STM32F405RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="4-1. FS-iA6B PC Interface.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 4-1. FS-iA6B PC Interface.elf
+ 
+arm-none-eabi-objdump -h -S  4-1.\ FS-iA6B\ PC\ Interface.elf  > "4-1. FS-iA6B PC Interface.list"
+arm-none-eabi-objcopy  -O binary  4-1.\ FS-iA6B\ PC\ Interface.elf  "4-1. FS-iA6B PC Interface.bin"
+arm-none-eabi-size   4-1.\ FS-iA6B\ PC\ Interface.elf 
+   text	   data	    bss	    dec	    hex	filename
+  37392	    492	   1916	  39800	   9b78	4-1. FS-iA6B PC Interface.elf
+Finished building: default.size.stdout
+ 
+Finished building: 4-1. FS-iA6B PC Interface.bin
+ 
+Finished building: 4-1. FS-iA6B PC Interface.list
+ 
+11:57:21 **** Incremental Build of configuration Debug for project 4-1. FS-iA6B PC Interface ****
+make -j8 all 
+arm-none-eabi-size   4-1.\ FS-iA6B\ PC\ Interface.elf 
+   text	   data	    bss	    dec	    hex	filename
+  37392	    492	   1916	  39800	   9b78	4-1. FS-iA6B PC Interface.elf
+Finished building: default.size.stdout
+ 
+11:57:36 **** Incremental Build of configuration Debug for project 4-1. FS-iA6B PC Interface ****
+make -j8 all 
+arm-none-eabi-size   4-1.\ FS-iA6B\ PC\ Interface.elf 
+   text	   data	    bss	    dec	    hex	filename
+  37392	    492	   1916	  39800	   9b78	4-1. FS-iA6B PC Interface.elf
+Finished building: default.size.stdout
+ 
+12:01:49 **** Incremental Build of configuration Debug for project 4-1. FS-iA6B PC Interface ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:62:0: warning: "CHIP_SELECT" redefined
+ #define CHIP_SELECT(ICM20602)  LL_GPIO_ResetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:30:0:
+../Core/Inc/BNO080.h:85:0: note: this is the location of the previous definition
+ #define CHIP_SELECT(BNO080)  LL_GPIO_ResetOutputPin(BNO080_SPI_CS_PORT, BNO080_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:63:0: warning: "CHIP_DESELECT" redefined
+ #define CHIP_DESELECT(ICM20602)  LL_GPIO_SetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:30:0:
+../Core/Inc/BNO080.h:86:0: note: this is the location of the previous definition
+ #define CHIP_DESELECT(BNO080) LL_GPIO_SetOutputPin(BNO080_SPI_CS_PORT, BNO080_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:63:0: warning: "CHIP_SELECT" redefined
+ #define CHIP_SELECT(LPS22HH)  LL_GPIO_ResetOutputPin(LPS22HH_SPI_CS_PORT, LPS22HH_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:62:0: note: this is the location of the previous definition
+ #define CHIP_SELECT(ICM20602)  LL_GPIO_ResetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:64:0: warning: "CHIP_DESELECT" redefined
+ #define CHIP_DESELECT(LPS22HH)  LL_GPIO_SetOutputPin(LPS22HH_SPI_CS_PORT, LPS22HH_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:63:0: note: this is the location of the previous definition
+ #define CHIP_DESELECT(ICM20602)  LL_GPIO_SetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:77:0: warning: "WHO_AM_I" redefined
+ #define WHO_AM_I  0x0F
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:130:0: note: this is the location of the previous definition
+ #define WHO_AM_I 0x75 //The default value of the register is 0x12.
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:96:0: warning: "TEMP_OUT_L" redefined
+ #define TEMP_OUT_L  0x2B
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:109:0: note: this is the location of the previous definition
+ #define TEMP_OUT_L 0x42
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:97:0: warning: "TEMP_OUT_H" redefined
+ #define TEMP_OUT_H  0x2C
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:108:0: note: this is the location of the previous definition
+ #define TEMP_OUT_H 0x41
+ 
+In file included from ../Core/Src/main.c:34:0:
+../Core/Inc/M8N.h:34:1: warning: useless type name in empty declaration
+ extern M8N_UBX_NAV_POSLLH;
+ ^~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:181:5: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+     printf("%d, %d, %d\n", (int)(ICM20602.gyro_x*100), (int)(ICM20602.gyro_y*100), (int)(ICM20602.gyro_z*100));
+     ^~~~~~
+../Core/Src/main.c:181:5: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:181:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Core/Src/main.c:95:8: warning: unused variable 'quatRadianAccuray' [-Wunused-variable]
+  float quatRadianAccuray;
+        ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:94:8: warning: unused variable 'q' [-Wunused-variable]
+  float q[4];
+        ^
+../Core/Src/main.c:93:8: warning: unused variable 'f' [-Wunused-variable]
+  float f = 1.234;
+        ^
+../Core/Src/main.c:92:6: warning: unused variable 'count' [-Wunused-variable]
+  int count = 0;
+      ^~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:232:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+make: *** [Core/Src/subdir.mk:77: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+12:02:25 **** Incremental Build of configuration Debug for project 4-1. FS-iA6B PC Interface ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:62:0: warning: "CHIP_SELECT" redefined
+ #define CHIP_SELECT(ICM20602)  LL_GPIO_ResetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:30:0:
+../Core/Inc/BNO080.h:85:0: note: this is the location of the previous definition
+ #define CHIP_SELECT(BNO080)  LL_GPIO_ResetOutputPin(BNO080_SPI_CS_PORT, BNO080_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:63:0: warning: "CHIP_DESELECT" redefined
+ #define CHIP_DESELECT(ICM20602)  LL_GPIO_SetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:30:0:
+../Core/Inc/BNO080.h:86:0: note: this is the location of the previous definition
+ #define CHIP_DESELECT(BNO080) LL_GPIO_SetOutputPin(BNO080_SPI_CS_PORT, BNO080_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:63:0: warning: "CHIP_SELECT" redefined
+ #define CHIP_SELECT(LPS22HH)  LL_GPIO_ResetOutputPin(LPS22HH_SPI_CS_PORT, LPS22HH_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:62:0: note: this is the location of the previous definition
+ #define CHIP_SELECT(ICM20602)  LL_GPIO_ResetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:64:0: warning: "CHIP_DESELECT" redefined
+ #define CHIP_DESELECT(LPS22HH)  LL_GPIO_SetOutputPin(LPS22HH_SPI_CS_PORT, LPS22HH_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:63:0: note: this is the location of the previous definition
+ #define CHIP_DESELECT(ICM20602)  LL_GPIO_SetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:77:0: warning: "WHO_AM_I" redefined
+ #define WHO_AM_I  0x0F
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:130:0: note: this is the location of the previous definition
+ #define WHO_AM_I 0x75 //The default value of the register is 0x12.
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:96:0: warning: "TEMP_OUT_L" redefined
+ #define TEMP_OUT_L  0x2B
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:109:0: note: this is the location of the previous definition
+ #define TEMP_OUT_L 0x42
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:97:0: warning: "TEMP_OUT_H" redefined
+ #define TEMP_OUT_H  0x2C
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:108:0: note: this is the location of the previous definition
+ #define TEMP_OUT_H 0x41
+ 
+In file included from ../Core/Src/main.c:34:0:
+../Core/Inc/M8N.h:34:1: warning: useless type name in empty declaration
+ extern M8N_UBX_NAV_POSLLH;
+ ^~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:181:5: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+     printf("%d, %d, %d\n", (int)(ICM20602.gyro_x*100), (int)(ICM20602.gyro_y*100), (int)(ICM20602.gyro_z*100));
+     ^~~~~~
+../Core/Src/main.c:181:5: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:181:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Core/Src/main.c:95:8: warning: unused variable 'quatRadianAccuray' [-Wunused-variable]
+  float quatRadianAccuray;
+        ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:94:8: warning: unused variable 'q' [-Wunused-variable]
+  float q[4];
+        ^
+../Core/Src/main.c:93:8: warning: unused variable 'f' [-Wunused-variable]
+  float f = 1.234;
+        ^
+../Core/Src/main.c:92:6: warning: unused variable 'count' [-Wunused-variable]
+  int count = 0;
+      ^~~~~
+arm-none-eabi-gcc -o "4-1. FS-iA6B PC Interface.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\FW\stm32drone\4-1. FS-iA6B PC Interface\STM32F405RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="4-1. FS-iA6B PC Interface.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 4-1. FS-iA6B PC Interface.elf
+ 
+arm-none-eabi-objdump -h -S  4-1.\ FS-iA6B\ PC\ Interface.elf  > "4-1. FS-iA6B PC Interface.list"
+arm-none-eabi-objcopy  -O binary  4-1.\ FS-iA6B\ PC\ Interface.elf  "4-1. FS-iA6B PC Interface.bin"
+arm-none-eabi-size   4-1.\ FS-iA6B\ PC\ Interface.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31516	    484	   1956	  33956	   84a4	4-1. FS-iA6B PC Interface.elf
+Finished building: default.size.stdout
+ 
+Finished building: 4-1. FS-iA6B PC Interface.bin
+ 
+Finished building: 4-1. FS-iA6B PC Interface.list
+ 
+12:03:19 **** Incremental Build of configuration Debug for project 4-1. FS-iA6B PC Interface ****
+make -j8 all 
+arm-none-eabi-size   4-1.\ FS-iA6B\ PC\ Interface.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31516	    484	   1956	  33956	   84a4	4-1. FS-iA6B PC Interface.elf
+Finished building: default.size.stdout
+ 
+12:04:14 **** Incremental Build of configuration Debug for project 4-1. FS-iA6B PC Interface ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:62:0: warning: "CHIP_SELECT" redefined
+ #define CHIP_SELECT(ICM20602)  LL_GPIO_ResetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:30:0:
+../Core/Inc/BNO080.h:85:0: note: this is the location of the previous definition
+ #define CHIP_SELECT(BNO080)  LL_GPIO_ResetOutputPin(BNO080_SPI_CS_PORT, BNO080_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:63:0: warning: "CHIP_DESELECT" redefined
+ #define CHIP_DESELECT(ICM20602)  LL_GPIO_SetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:30:0:
+../Core/Inc/BNO080.h:86:0: note: this is the location of the previous definition
+ #define CHIP_DESELECT(BNO080) LL_GPIO_SetOutputPin(BNO080_SPI_CS_PORT, BNO080_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:63:0: warning: "CHIP_SELECT" redefined
+ #define CHIP_SELECT(LPS22HH)  LL_GPIO_ResetOutputPin(LPS22HH_SPI_CS_PORT, LPS22HH_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:62:0: note: this is the location of the previous definition
+ #define CHIP_SELECT(ICM20602)  LL_GPIO_ResetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:64:0: warning: "CHIP_DESELECT" redefined
+ #define CHIP_DESELECT(LPS22HH)  LL_GPIO_SetOutputPin(LPS22HH_SPI_CS_PORT, LPS22HH_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:63:0: note: this is the location of the previous definition
+ #define CHIP_DESELECT(ICM20602)  LL_GPIO_SetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:77:0: warning: "WHO_AM_I" redefined
+ #define WHO_AM_I  0x0F
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:130:0: note: this is the location of the previous definition
+ #define WHO_AM_I 0x75 //The default value of the register is 0x12.
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:96:0: warning: "TEMP_OUT_L" redefined
+ #define TEMP_OUT_L  0x2B
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:109:0: note: this is the location of the previous definition
+ #define TEMP_OUT_L 0x42
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:97:0: warning: "TEMP_OUT_H" redefined
+ #define TEMP_OUT_H  0x2C
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:108:0: note: this is the location of the previous definition
+ #define TEMP_OUT_H 0x41
+ 
+In file included from ../Core/Src/main.c:34:0:
+../Core/Inc/M8N.h:34:1: warning: useless type name in empty declaration
+ extern M8N_UBX_NAV_POSLLH;
+ ^~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:180:5: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+     printf("%d, %d, %d\n", ICM20602.gyro_x_raw, ICM20602.gyro_y_raw, ICM20602.gyro_z_raw);
+     ^~~~~~
+../Core/Src/main.c:180:5: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:180:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Core/Src/main.c:95:8: warning: unused variable 'quatRadianAccuray' [-Wunused-variable]
+  float quatRadianAccuray;
+        ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:94:8: warning: unused variable 'q' [-Wunused-variable]
+  float q[4];
+        ^
+../Core/Src/main.c:93:8: warning: unused variable 'f' [-Wunused-variable]
+  float f = 1.234;
+        ^
+../Core/Src/main.c:92:6: warning: unused variable 'count' [-Wunused-variable]
+  int count = 0;
+      ^~~~~
+arm-none-eabi-gcc -o "4-1. FS-iA6B PC Interface.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\FW\stm32drone\4-1. FS-iA6B PC Interface\STM32F405RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="4-1. FS-iA6B PC Interface.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 4-1. FS-iA6B PC Interface.elf
+ 
+arm-none-eabi-objdump -h -S  4-1.\ FS-iA6B\ PC\ Interface.elf  > "4-1. FS-iA6B PC Interface.list"
+arm-none-eabi-objcopy  -O binary  4-1.\ FS-iA6B\ PC\ Interface.elf  "4-1. FS-iA6B PC Interface.bin"
+arm-none-eabi-size   4-1.\ FS-iA6B\ PC\ Interface.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31468	    484	   1956	  33908	   8474	4-1. FS-iA6B PC Interface.elf
+Finished building: default.size.stdout
+ 
+Finished building: 4-1. FS-iA6B PC Interface.bin
+ 
+Finished building: 4-1. FS-iA6B PC Interface.list
+ 
+12:04:29 **** Incremental Build of configuration Debug for project 4-1. FS-iA6B PC Interface ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:62:0: warning: "CHIP_SELECT" redefined
+ #define CHIP_SELECT(ICM20602)  LL_GPIO_ResetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:30:0:
+../Core/Inc/BNO080.h:85:0: note: this is the location of the previous definition
+ #define CHIP_SELECT(BNO080)  LL_GPIO_ResetOutputPin(BNO080_SPI_CS_PORT, BNO080_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:63:0: warning: "CHIP_DESELECT" redefined
+ #define CHIP_DESELECT(ICM20602)  LL_GPIO_SetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:30:0:
+../Core/Inc/BNO080.h:86:0: note: this is the location of the previous definition
+ #define CHIP_DESELECT(BNO080) LL_GPIO_SetOutputPin(BNO080_SPI_CS_PORT, BNO080_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:63:0: warning: "CHIP_SELECT" redefined
+ #define CHIP_SELECT(LPS22HH)  LL_GPIO_ResetOutputPin(LPS22HH_SPI_CS_PORT, LPS22HH_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:62:0: note: this is the location of the previous definition
+ #define CHIP_SELECT(ICM20602)  LL_GPIO_ResetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:64:0: warning: "CHIP_DESELECT" redefined
+ #define CHIP_DESELECT(LPS22HH)  LL_GPIO_SetOutputPin(LPS22HH_SPI_CS_PORT, LPS22HH_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:63:0: note: this is the location of the previous definition
+ #define CHIP_DESELECT(ICM20602)  LL_GPIO_SetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:77:0: warning: "WHO_AM_I" redefined
+ #define WHO_AM_I  0x0F
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:130:0: note: this is the location of the previous definition
+ #define WHO_AM_I 0x75 //The default value of the register is 0x12.
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:96:0: warning: "TEMP_OUT_L" redefined
+ #define TEMP_OUT_L  0x2B
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:109:0: note: this is the location of the previous definition
+ #define TEMP_OUT_L 0x42
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:97:0: warning: "TEMP_OUT_H" redefined
+ #define TEMP_OUT_H  0x2C
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:108:0: note: this is the location of the previous definition
+ #define TEMP_OUT_H 0x41
+ 
+In file included from ../Core/Src/main.c:34:0:
+../Core/Inc/M8N.h:34:1: warning: useless type name in empty declaration
+ extern M8N_UBX_NAV_POSLLH;
+ ^~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:180:5: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+     printf("%d, %d, %d\n", ICM20602.gyro_x_raw, ICM20602.gyro_y_raw, ICM20602.gyro_z_raw);
+     ^~~~~~
+../Core/Src/main.c:180:5: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:180:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Core/Src/main.c:95:8: warning: unused variable 'quatRadianAccuray' [-Wunused-variable]
+  float quatRadianAccuray;
+        ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:94:8: warning: unused variable 'q' [-Wunused-variable]
+  float q[4];
+        ^
+../Core/Src/main.c:93:8: warning: unused variable 'f' [-Wunused-variable]
+  float f = 1.234;
+        ^
+../Core/Src/main.c:92:6: warning: unused variable 'count' [-Wunused-variable]
+  int count = 0;
+      ^~~~~
+arm-none-eabi-gcc -o "4-1. FS-iA6B PC Interface.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\FW\stm32drone\4-1. FS-iA6B PC Interface\STM32F405RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="4-1. FS-iA6B PC Interface.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 4-1. FS-iA6B PC Interface.elf
+ 
+arm-none-eabi-objdump -h -S  4-1.\ FS-iA6B\ PC\ Interface.elf  > "4-1. FS-iA6B PC Interface.list"
+arm-none-eabi-objcopy  -O binary  4-1.\ FS-iA6B\ PC\ Interface.elf  "4-1. FS-iA6B PC Interface.bin"
+arm-none-eabi-size   4-1.\ FS-iA6B\ PC\ Interface.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31540	    484	   1956	  33980	   84bc	4-1. FS-iA6B PC Interface.elf
+Finished building: default.size.stdout
+ 
+Finished building: 4-1. FS-iA6B PC Interface.bin
+ 
+Finished building: 4-1. FS-iA6B PC Interface.list
+ 
+12:04:43 **** Incremental Build of configuration Debug for project 4-1. FS-iA6B PC Interface ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:62:0: warning: "CHIP_SELECT" redefined
+ #define CHIP_SELECT(ICM20602)  LL_GPIO_ResetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:30:0:
+../Core/Inc/BNO080.h:85:0: note: this is the location of the previous definition
+ #define CHIP_SELECT(BNO080)  LL_GPIO_ResetOutputPin(BNO080_SPI_CS_PORT, BNO080_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:63:0: warning: "CHIP_DESELECT" redefined
+ #define CHIP_DESELECT(ICM20602)  LL_GPIO_SetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:30:0:
+../Core/Inc/BNO080.h:86:0: note: this is the location of the previous definition
+ #define CHIP_DESELECT(BNO080) LL_GPIO_SetOutputPin(BNO080_SPI_CS_PORT, BNO080_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:63:0: warning: "CHIP_SELECT" redefined
+ #define CHIP_SELECT(LPS22HH)  LL_GPIO_ResetOutputPin(LPS22HH_SPI_CS_PORT, LPS22HH_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:62:0: note: this is the location of the previous definition
+ #define CHIP_SELECT(ICM20602)  LL_GPIO_ResetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:64:0: warning: "CHIP_DESELECT" redefined
+ #define CHIP_DESELECT(LPS22HH)  LL_GPIO_SetOutputPin(LPS22HH_SPI_CS_PORT, LPS22HH_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:63:0: note: this is the location of the previous definition
+ #define CHIP_DESELECT(ICM20602)  LL_GPIO_SetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:77:0: warning: "WHO_AM_I" redefined
+ #define WHO_AM_I  0x0F
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:130:0: note: this is the location of the previous definition
+ #define WHO_AM_I 0x75 //The default value of the register is 0x12.
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:96:0: warning: "TEMP_OUT_L" redefined
+ #define TEMP_OUT_L  0x2B
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:109:0: note: this is the location of the previous definition
+ #define TEMP_OUT_L 0x42
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:97:0: warning: "TEMP_OUT_H" redefined
+ #define TEMP_OUT_H  0x2C
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:108:0: note: this is the location of the previous definition
+ #define TEMP_OUT_H 0x41
+ 
+In file included from ../Core/Src/main.c:34:0:
+../Core/Inc/M8N.h:34:1: warning: useless type name in empty declaration
+ extern M8N_UBX_NAV_POSLLH;
+ ^~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:180:5: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+     printf("%d, %d, %d\n", ICM20602.gyro_x_raw, ICM20602.gyro_y_raw, ICM20602.gyro_z_raw);
+     ^~~~~~
+../Core/Src/main.c:180:5: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:180:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Core/Src/main.c:95:8: warning: unused variable 'quatRadianAccuray' [-Wunused-variable]
+  float quatRadianAccuray;
+        ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:94:8: warning: unused variable 'q' [-Wunused-variable]
+  float q[4];
+        ^
+../Core/Src/main.c:93:8: warning: unused variable 'f' [-Wunused-variable]
+  float f = 1.234;
+        ^
+../Core/Src/main.c:92:6: warning: unused variable 'count' [-Wunused-variable]
+  int count = 0;
+      ^~~~~
+arm-none-eabi-gcc -o "4-1. FS-iA6B PC Interface.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\FW\stm32drone\4-1. FS-iA6B PC Interface\STM32F405RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="4-1. FS-iA6B PC Interface.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 4-1. FS-iA6B PC Interface.elf
+ 
+arm-none-eabi-objdump -h -S  4-1.\ FS-iA6B\ PC\ Interface.elf  > "4-1. FS-iA6B PC Interface.list"
+arm-none-eabi-objcopy  -O binary  4-1.\ FS-iA6B\ PC\ Interface.elf  "4-1. FS-iA6B PC Interface.bin"
+arm-none-eabi-size   4-1.\ FS-iA6B\ PC\ Interface.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31468	    484	   1956	  33908	   8474	4-1. FS-iA6B PC Interface.elf
+Finished building: default.size.stdout
+ 
+Finished building: 4-1. FS-iA6B PC Interface.bin
+ 
+Finished building: 4-1. FS-iA6B PC Interface.list
+ 
+12:04:52 **** Incremental Build of configuration Debug for project 4-1. FS-iA6B PC Interface ****
+make -j8 all 
+arm-none-eabi-size   4-1.\ FS-iA6B\ PC\ Interface.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31468	    484	   1956	  33908	   8474	4-1. FS-iA6B PC Interface.elf
+Finished building: default.size.stdout
+ 
+12:05:41 **** Incremental Build of configuration Debug for project 4-1. FS-iA6B PC Interface ****
+make -j8 all 
+arm-none-eabi-size   4-1.\ FS-iA6B\ PC\ Interface.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31468	    484	   1956	  33908	   8474	4-1. FS-iA6B PC Interface.elf
+Finished building: default.size.stdout
+ 
+12:06:21 **** Incremental Build of configuration Debug for project 4-1. FS-iA6B PC Interface ****
+make -j8 all 
+arm-none-eabi-size   4-1.\ FS-iA6B\ PC\ Interface.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31468	    484	   1956	  33908	   8474	4-1. FS-iA6B PC Interface.elf
+Finished building: default.size.stdout
+ 
+12:06:35 **** Incremental Build of configuration Debug for project 4-1. FS-iA6B PC Interface ****
+make -j8 all 
+arm-none-eabi-size   4-1.\ FS-iA6B\ PC\ Interface.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31468	    484	   1956	  33908	   8474	4-1. FS-iA6B PC Interface.elf
+Finished building: default.size.stdout
+ 
+12:11:24 **** Incremental Build of configuration Debug for project 4-1. FS-iA6B PC Interface ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:62:0: warning: "CHIP_SELECT" redefined
+ #define CHIP_SELECT(ICM20602)  LL_GPIO_ResetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:30:0:
+../Core/Inc/BNO080.h:85:0: note: this is the location of the previous definition
+ #define CHIP_SELECT(BNO080)  LL_GPIO_ResetOutputPin(BNO080_SPI_CS_PORT, BNO080_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:63:0: warning: "CHIP_DESELECT" redefined
+ #define CHIP_DESELECT(ICM20602)  LL_GPIO_SetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:30:0:
+../Core/Inc/BNO080.h:86:0: note: this is the location of the previous definition
+ #define CHIP_DESELECT(BNO080) LL_GPIO_SetOutputPin(BNO080_SPI_CS_PORT, BNO080_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:63:0: warning: "CHIP_SELECT" redefined
+ #define CHIP_SELECT(LPS22HH)  LL_GPIO_ResetOutputPin(LPS22HH_SPI_CS_PORT, LPS22HH_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:62:0: note: this is the location of the previous definition
+ #define CHIP_SELECT(ICM20602)  LL_GPIO_ResetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:64:0: warning: "CHIP_DESELECT" redefined
+ #define CHIP_DESELECT(LPS22HH)  LL_GPIO_SetOutputPin(LPS22HH_SPI_CS_PORT, LPS22HH_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:63:0: note: this is the location of the previous definition
+ #define CHIP_DESELECT(ICM20602)  LL_GPIO_SetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:77:0: warning: "WHO_AM_I" redefined
+ #define WHO_AM_I  0x0F
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:130:0: note: this is the location of the previous definition
+ #define WHO_AM_I 0x75 //The default value of the register is 0x12.
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:96:0: warning: "TEMP_OUT_L" redefined
+ #define TEMP_OUT_L  0x2B
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:109:0: note: this is the location of the previous definition
+ #define TEMP_OUT_L 0x42
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:97:0: warning: "TEMP_OUT_H" redefined
+ #define TEMP_OUT_H  0x2C
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:108:0: note: this is the location of the previous definition
+ #define TEMP_OUT_H 0x41
+ 
+In file included from ../Core/Src/main.c:34:0:
+../Core/Inc/M8N.h:34:1: warning: useless type name in empty declaration
+ extern M8N_UBX_NAV_POSLLH;
+ ^~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:180:5: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+     printf("%d, %d, %d\n", ICM20602.gyro_x_raw, ICM20602.gyro_y_raw, ICM20602.gyro_z_raw);
+     ^~~~~~
+../Core/Src/main.c:180:5: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:180:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Core/Src/main.c:95:8: warning: unused variable 'quatRadianAccuray' [-Wunused-variable]
+  float quatRadianAccuray;
+        ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:94:8: warning: unused variable 'q' [-Wunused-variable]
+  float q[4];
+        ^
+../Core/Src/main.c:93:8: warning: unused variable 'f' [-Wunused-variable]
+  float f = 1.234;
+        ^
+../Core/Src/main.c:92:6: warning: unused variable 'count' [-Wunused-variable]
+  int count = 0;
+      ^~~~~
+arm-none-eabi-gcc -o "4-1. FS-iA6B PC Interface.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\FW\stm32drone\4-1. FS-iA6B PC Interface\STM32F405RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="4-1. FS-iA6B PC Interface.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 4-1. FS-iA6B PC Interface.elf
+ 
+arm-none-eabi-objdump -h -S  4-1.\ FS-iA6B\ PC\ Interface.elf  > "4-1. FS-iA6B PC Interface.list"
+arm-none-eabi-objcopy  -O binary  4-1.\ FS-iA6B\ PC\ Interface.elf  "4-1. FS-iA6B PC Interface.bin"
+arm-none-eabi-size   4-1.\ FS-iA6B\ PC\ Interface.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31428	    484	   1956	  33868	   844c	4-1. FS-iA6B PC Interface.elf
+Finished building: default.size.stdout
+ 
+Finished building: 4-1. FS-iA6B PC Interface.bin
+ 
+Finished building: 4-1. FS-iA6B PC Interface.list
+ 
+12:11:31 **** Incremental Build of configuration Debug for project 4-1. FS-iA6B PC Interface ****
+make -j8 all 
+arm-none-eabi-size   4-1.\ FS-iA6B\ PC\ Interface.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31428	    484	   1956	  33868	   844c	4-1. FS-iA6B PC Interface.elf
+Finished building: default.size.stdout
+ 
+12:11:57 **** Incremental Build of configuration Debug for project 4-1. FS-iA6B PC Interface ****
+make -j8 all 
+arm-none-eabi-size   4-1.\ FS-iA6B\ PC\ Interface.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31428	    484	   1956	  33868	   844c	4-1. FS-iA6B PC Interface.elf
+Finished building: default.size.stdout
+ 
+15:48:12 **** Build of configuration Debug for project 01. Source ****
+make -j8 all 
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dma.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_tim.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usart.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usart.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.o"
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -x assembler-with-cpp --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Startup/startup_stm32f405rgtx.o" "../Core/Startup/startup_stm32f405rgtx.s"
+arm-none-eabi-gcc "../Core/Src/BNO080.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/BNO080.d" -MT"Core/Src/BNO080.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/BNO080.o"
+arm-none-eabi-gcc "../Core/Src/FS-iA6B.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/FS-iA6B.d" -MT"Core/Src/FS-iA6B.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/FS-iA6B.o"
+arm-none-eabi-gcc "../Core/Src/ICM20602.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/ICM20602.d" -MT"Core/Src/ICM20602.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ICM20602.o"
+arm-none-eabi-gcc "../Core/Src/LPS22HH.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/LPS22HH.d" -MT"Core/Src/LPS22HH.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/LPS22HH.o"
+arm-none-eabi-gcc "../Core/Src/M8N.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/M8N.d" -MT"Core/Src/M8N.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/M8N.o"
+../Core/Src/BNO080.c: In function 'BNO080_Initialization':
+../Core/Src/BNO080.c:166:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf("Checking BNO080...");
+  ^~~~~~
+../Core/Src/BNO080.c:166:2: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/BNO080.c:166:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Core/Src/BNO080.c: In function 'BNO080_readFRSdata':
+../Core/Src/BNO080.c:708:4: warning: incompatible implicit declaration of built-in function 'printf'
+    printf("metaData array over run. Returning.");
+    ^~~~~~
+../Core/Src/BNO080.c:708:4: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Core/Src/BNO080.c: In function 'BNO080_waitForSPI':
+../Core/Src/BNO080.c:1007:2: warning: incompatible implicit declaration of built-in function 'printf'
+  printf("\nData not available\n");
+  ^~~~~~
+../Core/Src/BNO080.c:1007:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+arm-none-eabi-gcc "../Core/Src/Quaternion.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/Quaternion.d" -MT"Core/Src/Quaternion.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/Quaternion.o"
+arm-none-eabi-gcc "../Core/Src/gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/gpio.d" -MT"Core/Src/gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/gpio.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/ICM20602.c: In function 'ICM20602_Initialization':
+../Core/Src/ICM20602.c:158:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf("Checking ICM20602...");
+  ^~~~~~
+../Core/Src/ICM20602.c:158:2: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/ICM20602.c:158:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Core/Src/ICM20602.c:154:10: warning: unused variable 'gyro_raw_data' [-Wunused-variable]
+  int16_t gyro_raw_data[3] = {0};   // To remove offset
+          ^~~~~~~~~~~~~
+../Core/Src/ICM20602.c:153:10: warning: unused variable 'accel_raw_data' [-Wunused-variable]
+  int16_t accel_raw_data[3] = {0};  // To remove offset
+          ^~~~~~~~~~~~~~
+In file included from ../Core/Src/M8N.c:8:0:
+../Core/Inc/M8N.h:34:1: warning: useless type name in empty declaration
+ extern M8N_UBX_NAV_POSLLH;
+ ^~~~~~
+../Core/Src/M8N.c: In function 'M8N_UBX_Initialization':
+../Core/Src/M8N.c:32:19: warning: passing argument 1 of 'M8N_UBX_dataSend' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  M8N_UBX_dataSend(&UBX_CFG_PRT[0],sizeof(UBX_CFG_PRT));
+                   ^
+In file included from ../Core/Src/M8N.c:8:0:
+../Core/Inc/M8N.h:39:6: note: expected 'unsigned char *' but argument is of type 'const unsigned char *'
+ void M8N_UBX_dataSend(unsigned char* data, unsigned char len);
+      ^~~~~~~~~~~~~~~~
+../Core/Src/M8N.c:34:19: warning: passing argument 1 of 'M8N_UBX_dataSend' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  M8N_UBX_dataSend(&UBX_CFG_MSG[0],sizeof(UBX_CFG_MSG));
+                   ^
+In file included from ../Core/Src/M8N.c:8:0:
+../Core/Inc/M8N.h:39:6: note: expected 'unsigned char *' but argument is of type 'const unsigned char *'
+ void M8N_UBX_dataSend(unsigned char* data, unsigned char len);
+      ^~~~~~~~~~~~~~~~
+../Core/Src/M8N.c:36:19: warning: passing argument 1 of 'M8N_UBX_dataSend' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  M8N_UBX_dataSend(&UBX_CFG_RATE[0],sizeof(UBX_CFG_RATE));
+                   ^
+In file included from ../Core/Src/M8N.c:8:0:
+../Core/Inc/M8N.h:39:6: note: expected 'unsigned char *' but argument is of type 'const unsigned char *'
+ void M8N_UBX_dataSend(unsigned char* data, unsigned char len);
+      ^~~~~~~~~~~~~~~~
+../Core/Src/M8N.c:38:19: warning: passing argument 1 of 'M8N_UBX_dataSend' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  M8N_UBX_dataSend(&UBX_CFG_CFG[0],sizeof(UBX_CFG_CFG));
+                   ^
+In file included from ../Core/Src/M8N.c:8:0:
+../Core/Inc/M8N.h:39:6: note: expected 'unsigned char *' but argument is of type 'const unsigned char *'
+ void M8N_UBX_dataSend(unsigned char* data, unsigned char len);
+      ^~~~~~~~~~~~~~~~
+../Core/Src/LPS22HH.c: In function 'LPS22HH_Initialization':
+../Core/Src/LPS22HH.c:160:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf("Checking LPS22HH...");
+  ^~~~~~
+../Core/Src/LPS22HH.c:160:2: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/LPS22HH.c:160:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:62:0: warning: "CHIP_SELECT" redefined
+ #define CHIP_SELECT(ICM20602)  LL_GPIO_ResetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:30:0:
+../Core/Inc/BNO080.h:85:0: note: this is the location of the previous definition
+ #define CHIP_SELECT(BNO080)  LL_GPIO_ResetOutputPin(BNO080_SPI_CS_PORT, BNO080_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:63:0: warning: "CHIP_DESELECT" redefined
+ #define CHIP_DESELECT(ICM20602)  LL_GPIO_SetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:30:0:
+../Core/Inc/BNO080.h:86:0: note: this is the location of the previous definition
+ #define CHIP_DESELECT(BNO080) LL_GPIO_SetOutputPin(BNO080_SPI_CS_PORT, BNO080_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:63:0: warning: "CHIP_SELECT" redefined
+ #define CHIP_SELECT(LPS22HH)  LL_GPIO_ResetOutputPin(LPS22HH_SPI_CS_PORT, LPS22HH_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:62:0: note: this is the location of the previous definition
+ #define CHIP_SELECT(ICM20602)  LL_GPIO_ResetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:64:0: warning: "CHIP_DESELECT" redefined
+ #define CHIP_DESELECT(LPS22HH)  LL_GPIO_SetOutputPin(LPS22HH_SPI_CS_PORT, LPS22HH_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:63:0: note: this is the location of the previous definition
+ #define CHIP_DESELECT(ICM20602)  LL_GPIO_SetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:77:0: warning: "WHO_AM_I" redefined
+ #define WHO_AM_I  0x0F
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:130:0: note: this is the location of the previous definition
+ #define WHO_AM_I 0x75 //The default value of the register is 0x12.
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:96:0: warning: "TEMP_OUT_L" redefined
+ #define TEMP_OUT_L  0x2B
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:109:0: note: this is the location of the previous definition
+ #define TEMP_OUT_L 0x42
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:97:0: warning: "TEMP_OUT_H" redefined
+ #define TEMP_OUT_H  0x2C
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:108:0: note: this is the location of the previous definition
+ #define TEMP_OUT_H 0x41
+ 
+In file included from ../Core/Src/main.c:34:0:
+../Core/Inc/M8N.h:34:1: warning: useless type name in empty declaration
+ extern M8N_UBX_NAV_POSLLH;
+ ^~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:186:5: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+     printf("%d, %d, %d\n", ICM20602.gyro_x_raw, ICM20602.gyro_y_raw, ICM20602.gyro_z_raw);
+     ^~~~~~
+../Core/Src/main.c:186:5: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:186:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Core/Src/main.c:95:8: warning: unused variable 'quatRadianAccuray' [-Wunused-variable]
+  float quatRadianAccuray;
+        ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:94:8: warning: unused variable 'q' [-Wunused-variable]
+  float q[4];
+        ^
+../Core/Src/main.c:93:8: warning: unused variable 'f' [-Wunused-variable]
+  float f = 1.234;
+        ^
+../Core/Src/main.c:92:6: warning: unused variable 'count' [-Wunused-variable]
+  int count = 0;
+      ^~~~~
+arm-none-eabi-gcc "../Core/Src/spi.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/spi.d" -MT"Core/Src/spi.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/spi.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+arm-none-eabi-gcc "../Core/Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/syscalls.d" -MT"Core/Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/syscalls.o"
+arm-none-eabi-gcc "../Core/Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/sysmem.d" -MT"Core/Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/sysmem.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32f4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/system_stm32f4xx.d" -MT"Core/Src/system_stm32f4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32f4xx.o"
+arm-none-eabi-gcc "../Core/Src/tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/tim.d" -MT"Core/Src/tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/tim.o"
+arm-none-eabi-gcc "../Core/Src/usart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/usart.d" -MT"Core/Src/usart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/usart.o"
+arm-none-eabi-gcc -o "01. Source.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\FW\stm32drone\01. Source\STM32F405RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="01. Source.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 01. Source.elf
+ 
+arm-none-eabi-size   01.\ Source.elf 
+arm-none-eabi-objdump -h -S  01.\ Source.elf  > "01. Source.list"
+arm-none-eabi-objcopy  -O binary  01.\ Source.elf  "01. Source.bin"
+   text	   data	    bss	    dec	    hex	filename
+  31844	    484	   1956	  34284	   85ec	01. Source.elf
+Finished building: default.size.stdout
+ 
+Finished building: 01. Source.bin
+ 
+Finished building: 01. Source.list
+ 
+15:53:42 **** Incremental Build of configuration Debug for project 01. Source ****
+make -j8 all 
+arm-none-eabi-size   01.\ Source.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31844	    484	   1956	  34284	   85ec	01. Source.elf
+Finished building: default.size.stdout
+ 
+15:53:54 **** Incremental Build of configuration Debug for project 01. Source ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:62:0: warning: "CHIP_SELECT" redefined
+ #define CHIP_SELECT(ICM20602)  LL_GPIO_ResetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:30:0:
+../Core/Inc/BNO080.h:85:0: note: this is the location of the previous definition
+ #define CHIP_SELECT(BNO080)  LL_GPIO_ResetOutputPin(BNO080_SPI_CS_PORT, BNO080_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:63:0: warning: "CHIP_DESELECT" redefined
+ #define CHIP_DESELECT(ICM20602)  LL_GPIO_SetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:30:0:
+../Core/Inc/BNO080.h:86:0: note: this is the location of the previous definition
+ #define CHIP_DESELECT(BNO080) LL_GPIO_SetOutputPin(BNO080_SPI_CS_PORT, BNO080_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:63:0: warning: "CHIP_SELECT" redefined
+ #define CHIP_SELECT(LPS22HH)  LL_GPIO_ResetOutputPin(LPS22HH_SPI_CS_PORT, LPS22HH_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:62:0: note: this is the location of the previous definition
+ #define CHIP_SELECT(ICM20602)  LL_GPIO_ResetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:64:0: warning: "CHIP_DESELECT" redefined
+ #define CHIP_DESELECT(LPS22HH)  LL_GPIO_SetOutputPin(LPS22HH_SPI_CS_PORT, LPS22HH_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:63:0: note: this is the location of the previous definition
+ #define CHIP_DESELECT(ICM20602)  LL_GPIO_SetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:77:0: warning: "WHO_AM_I" redefined
+ #define WHO_AM_I  0x0F
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:130:0: note: this is the location of the previous definition
+ #define WHO_AM_I 0x75 //The default value of the register is 0x12.
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:96:0: warning: "TEMP_OUT_L" redefined
+ #define TEMP_OUT_L  0x2B
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:109:0: note: this is the location of the previous definition
+ #define TEMP_OUT_L 0x42
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:97:0: warning: "TEMP_OUT_H" redefined
+ #define TEMP_OUT_H  0x2C
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:108:0: note: this is the location of the previous definition
+ #define TEMP_OUT_H 0x41
+ 
+In file included from ../Core/Src/main.c:34:0:
+../Core/Inc/M8N.h:34:1: warning: useless type name in empty declaration
+ extern M8N_UBX_NAV_POSLLH;
+ ^~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:187:5: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+     printf("%d, %d, %d\n", ICM20602.gyro_x_raw, ICM20602.gyro_y_raw, ICM20602.gyro_z_raw);
+     ^~~~~~
+../Core/Src/main.c:187:5: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:187:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Core/Src/main.c:95:8: warning: unused variable 'quatRadianAccuray' [-Wunused-variable]
+  float quatRadianAccuray;
+        ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:94:8: warning: unused variable 'q' [-Wunused-variable]
+  float q[4];
+        ^
+../Core/Src/main.c:93:8: warning: unused variable 'f' [-Wunused-variable]
+  float f = 1.234;
+        ^
+../Core/Src/main.c:92:6: warning: unused variable 'count' [-Wunused-variable]
+  int count = 0;
+      ^~~~~
+arm-none-eabi-gcc -o "01. Source.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\FW\stm32drone\01. Source\STM32F405RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="01. Source.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 01. Source.elf
+ 
+arm-none-eabi-objdump -h -S  01.\ Source.elf  > "01. Source.list"
+arm-none-eabi-objcopy  -O binary  01.\ Source.elf  "01. Source.bin"
+arm-none-eabi-size   01.\ Source.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31852	    484	   1956	  34292	   85f4	01. Source.elf
+Finished building: default.size.stdout
+ 
+Finished building: 01. Source.bin
+ 
+Finished building: 01. Source.list
+ 
+15:55:40 **** Incremental Build of configuration Debug for project 01. Source ****
+make -j8 all 
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dma.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_tim.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usart.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usart.o"
+arm-none-eabi-gcc "../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.d" -MT"Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.o"
+arm-none-eabi-gcc "../Core/Src/BNO080.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/BNO080.d" -MT"Core/Src/BNO080.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/BNO080.o"
+arm-none-eabi-gcc "../Core/Src/FS-iA6B.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/FS-iA6B.d" -MT"Core/Src/FS-iA6B.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/FS-iA6B.o"
+arm-none-eabi-gcc "../Core/Src/ICM20602.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/ICM20602.d" -MT"Core/Src/ICM20602.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ICM20602.o"
+arm-none-eabi-gcc "../Core/Src/LPS22HH.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/LPS22HH.d" -MT"Core/Src/LPS22HH.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/LPS22HH.o"
+arm-none-eabi-gcc "../Core/Src/M8N.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/M8N.d" -MT"Core/Src/M8N.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/M8N.o"
+arm-none-eabi-gcc "../Core/Src/Quaternion.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/Quaternion.d" -MT"Core/Src/Quaternion.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/Quaternion.o"
+../Core/Src/BNO080.c: In function 'BNO080_Initialization':
+../Core/Src/BNO080.c:166:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf("Checking BNO080...");
+  ^~~~~~
+../Core/Src/BNO080.c:166:2: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/BNO080.c:166:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Core/Src/BNO080.c: In function 'BNO080_readFRSdata':
+../Core/Src/BNO080.c:708:4: warning: incompatible implicit declaration of built-in function 'printf'
+    printf("metaData array over run. Returning.");
+    ^~~~~~
+../Core/Src/BNO080.c:708:4: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Core/Src/BNO080.c: In function 'BNO080_waitForSPI':
+../Core/Src/BNO080.c:1007:2: warning: incompatible implicit declaration of built-in function 'printf'
+  printf("\nData not available\n");
+  ^~~~~~
+../Core/Src/BNO080.c:1007:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Core/Src/ICM20602.c: In function 'ICM20602_Initialization':
+../Core/Src/ICM20602.c:158:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf("Checking ICM20602...");
+  ^~~~~~
+../Core/Src/ICM20602.c:158:2: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/ICM20602.c:158:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Core/Src/ICM20602.c:154:10: warning: unused variable 'gyro_raw_data' [-Wunused-variable]
+  int16_t gyro_raw_data[3] = {0};   // To remove offset
+          ^~~~~~~~~~~~~
+../Core/Src/ICM20602.c:153:10: warning: unused variable 'accel_raw_data' [-Wunused-variable]
+  int16_t accel_raw_data[3] = {0};  // To remove offset
+          ^~~~~~~~~~~~~~
+../Core/Src/LPS22HH.c: In function 'LPS22HH_Initialization':
+../Core/Src/LPS22HH.c:160:2: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  printf("Checking LPS22HH...");
+  ^~~~~~
+../Core/Src/LPS22HH.c:160:2: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/LPS22HH.c:160:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+In file included from ../Core/Src/M8N.c:8:0:
+../Core/Inc/M8N.h:34:1: warning: useless type name in empty declaration
+ extern M8N_UBX_NAV_POSLLH;
+ ^~~~~~
+../Core/Src/M8N.c: In function 'M8N_UBX_Initialization':
+../Core/Src/M8N.c:32:19: warning: passing argument 1 of 'M8N_UBX_dataSend' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  M8N_UBX_dataSend(&UBX_CFG_PRT[0],sizeof(UBX_CFG_PRT));
+                   ^
+In file included from ../Core/Src/M8N.c:8:0:
+../Core/Inc/M8N.h:39:6: note: expected 'unsigned char *' but argument is of type 'const unsigned char *'
+ void M8N_UBX_dataSend(unsigned char* data, unsigned char len);
+      ^~~~~~~~~~~~~~~~
+../Core/Src/M8N.c:34:19: warning: passing argument 1 of 'M8N_UBX_dataSend' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  M8N_UBX_dataSend(&UBX_CFG_MSG[0],sizeof(UBX_CFG_MSG));
+                   ^
+In file included from ../Core/Src/M8N.c:8:0:
+../Core/Inc/M8N.h:39:6: note: expected 'unsigned char *' but argument is of type 'const unsigned char *'
+arm-none-eabi-gcc "../Core/Src/gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/gpio.d" -MT"Core/Src/gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/gpio.o"
+ void M8N_UBX_dataSend(unsigned char* data, unsigned char len);
+      ^~~~~~~~~~~~~~~~
+../Core/Src/M8N.c:36:19: warning: passing argument 1 of 'M8N_UBX_dataSend' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  M8N_UBX_dataSend(&UBX_CFG_RATE[0],sizeof(UBX_CFG_RATE));
+                   ^
+In file included from ../Core/Src/M8N.c:8:0:
+../Core/Inc/M8N.h:39:6: note: expected 'unsigned char *' but argument is of type 'const unsigned char *'
+ void M8N_UBX_dataSend(unsigned char* data, unsigned char len);
+      ^~~~~~~~~~~~~~~~
+../Core/Src/M8N.c:38:19: warning: passing argument 1 of 'M8N_UBX_dataSend' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  M8N_UBX_dataSend(&UBX_CFG_CFG[0],sizeof(UBX_CFG_CFG));
+                   ^
+In file included from ../Core/Src/M8N.c:8:0:
+../Core/Inc/M8N.h:39:6: note: expected 'unsigned char *' but argument is of type 'const unsigned char *'
+ void M8N_UBX_dataSend(unsigned char* data, unsigned char len);
+      ^~~~~~~~~~~~~~~~
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:62:0: warning: "CHIP_SELECT" redefined
+ #define CHIP_SELECT(ICM20602)  LL_GPIO_ResetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:30:0:
+../Core/Inc/BNO080.h:85:0: note: this is the location of the previous definition
+ #define CHIP_SELECT(BNO080)  LL_GPIO_ResetOutputPin(BNO080_SPI_CS_PORT, BNO080_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:63:0: warning: "CHIP_DESELECT" redefined
+ #define CHIP_DESELECT(ICM20602)  LL_GPIO_SetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:30:0:
+../Core/Inc/BNO080.h:86:0: note: this is the location of the previous definition
+ #define CHIP_DESELECT(BNO080) LL_GPIO_SetOutputPin(BNO080_SPI_CS_PORT, BNO080_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:63:0: warning: "CHIP_SELECT" redefined
+ #define CHIP_SELECT(LPS22HH)  LL_GPIO_ResetOutputPin(LPS22HH_SPI_CS_PORT, LPS22HH_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:62:0: note: this is the location of the previous definition
+ #define CHIP_SELECT(ICM20602)  LL_GPIO_ResetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:64:0: warning: "CHIP_DESELECT" redefined
+ #define CHIP_DESELECT(LPS22HH)  LL_GPIO_SetOutputPin(LPS22HH_SPI_CS_PORT, LPS22HH_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:63:0: note: this is the location of the previous definition
+ #define CHIP_DESELECT(ICM20602)  LL_GPIO_SetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:77:0: warning: "WHO_AM_I" redefined
+ #define WHO_AM_I  0x0F
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:130:0: note: this is the location of the previous definition
+ #define WHO_AM_I 0x75 //The default value of the register is 0x12.
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:96:0: warning: "TEMP_OUT_L" redefined
+ #define TEMP_OUT_L  0x2B
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:109:0: note: this is the location of the previous definition
+ #define TEMP_OUT_L 0x42
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:97:0: warning: "TEMP_OUT_H" redefined
+ #define TEMP_OUT_H  0x2C
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:108:0: note: this is the location of the previous definition
+ #define TEMP_OUT_H 0x41
+ 
+In file included from ../Core/Src/main.c:34:0:
+../Core/Inc/M8N.h:34:1: warning: useless type name in empty declaration
+ extern M8N_UBX_NAV_POSLLH;
+ ^~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:195:5: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+     printf("%d, %d, %d\n", ICM20602.gyro_x_raw, ICM20602.gyro_y_raw, ICM20602.gyro_z_raw);
+     ^~~~~~
+../Core/Src/main.c:195:5: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:195:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Core/Src/main.c:93:8: warning: unused variable 'quatRadianAccuray' [-Wunused-variable]
+  float quatRadianAccuray;
+        ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:92:8: warning: unused variable 'q' [-Wunused-variable]
+  float q[4];
+        ^
+arm-none-eabi-gcc "../Core/Src/spi.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/spi.d" -MT"Core/Src/spi.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/spi.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32f4xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/system_stm32f4xx.d" -MT"Core/Src/system_stm32f4xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/system_stm32f4xx.o"
+arm-none-eabi-gcc "../Core/Src/tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/tim.d" -MT"Core/Src/tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/tim.o"
+arm-none-eabi-gcc "../Core/Src/usart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/usart.d" -MT"Core/Src/usart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/usart.o"
+arm-none-eabi-gcc -o "01. Source.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\FW\stm32drone\01. Source\STM32F405RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="01. Source.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 01. Source.elf
+ 
+arm-none-eabi-objdump -h -S  01.\ Source.elf  > "01. Source.list"
+arm-none-eabi-objcopy  -O binary  01.\ Source.elf  "01. Source.bin"
+arm-none-eabi-size   01.\ Source.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31892	    484	   1956	  34332	   861c	01. Source.elf
+Finished building: default.size.stdout
+ 
+Finished building: 01. Source.bin
+ 
+Finished building: 01. Source.list
+ 
+16:02:56 **** Incremental Build of configuration Debug for project 01. Source ****
+make -j8 all 
+arm-none-eabi-size   01.\ Source.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31892	    484	   1956	  34332	   861c	01. Source.elf
+Finished building: default.size.stdout
+ 
+16:06:19 **** Incremental Build of configuration Debug for project 01. Source ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:62:0: warning: "CHIP_SELECT" redefined
+ #define CHIP_SELECT(ICM20602)  LL_GPIO_ResetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:30:0:
+../Core/Inc/BNO080.h:85:0: note: this is the location of the previous definition
+ #define CHIP_SELECT(BNO080)  LL_GPIO_ResetOutputPin(BNO080_SPI_CS_PORT, BNO080_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:63:0: warning: "CHIP_DESELECT" redefined
+ #define CHIP_DESELECT(ICM20602)  LL_GPIO_SetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:30:0:
+../Core/Inc/BNO080.h:86:0: note: this is the location of the previous definition
+ #define CHIP_DESELECT(BNO080) LL_GPIO_SetOutputPin(BNO080_SPI_CS_PORT, BNO080_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:63:0: warning: "CHIP_SELECT" redefined
+ #define CHIP_SELECT(LPS22HH)  LL_GPIO_ResetOutputPin(LPS22HH_SPI_CS_PORT, LPS22HH_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:62:0: note: this is the location of the previous definition
+ #define CHIP_SELECT(ICM20602)  LL_GPIO_ResetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:64:0: warning: "CHIP_DESELECT" redefined
+ #define CHIP_DESELECT(LPS22HH)  LL_GPIO_SetOutputPin(LPS22HH_SPI_CS_PORT, LPS22HH_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:63:0: note: this is the location of the previous definition
+ #define CHIP_DESELECT(ICM20602)  LL_GPIO_SetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:77:0: warning: "WHO_AM_I" redefined
+ #define WHO_AM_I  0x0F
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:130:0: note: this is the location of the previous definition
+ #define WHO_AM_I 0x75 //The default value of the register is 0x12.
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:96:0: warning: "TEMP_OUT_L" redefined
+ #define TEMP_OUT_L  0x2B
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:109:0: note: this is the location of the previous definition
+ #define TEMP_OUT_L 0x42
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:97:0: warning: "TEMP_OUT_H" redefined
+ #define TEMP_OUT_H  0x2C
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:108:0: note: this is the location of the previous definition
+ #define TEMP_OUT_H 0x41
+ 
+In file included from ../Core/Src/main.c:34:0:
+../Core/Inc/M8N.h:34:1: warning: useless type name in empty declaration
+ extern M8N_UBX_NAV_POSLLH;
+ ^~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:195:5: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+     printf("%d, %d, %d\n", ICM20602.gyro_x_raw, ICM20602.gyro_y_raw, ICM20602.gyro_z_raw);
+     ^~~~~~
+../Core/Src/main.c:195:5: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:195:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Core/Src/main.c:93:8: warning: unused variable 'quatRadianAccuray' [-Wunused-variable]
+  float quatRadianAccuray;
+        ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:92:8: warning: unused variable 'q' [-Wunused-variable]
+  float q[4];
+        ^
+arm-none-eabi-gcc -o "01. Source.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\FW\stm32drone\01. Source\STM32F405RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="01. Source.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 01. Source.elf
+ 
+arm-none-eabi-objdump -h -S  01.\ Source.elf  > "01. Source.list"
+arm-none-eabi-objcopy  -O binary  01.\ Source.elf  "01. Source.bin"
+arm-none-eabi-size   01.\ Source.elf 
+   text	   data	    bss	    dec	    hex	filename
+  32732	    484	   1980	  35196	   897c	01. Source.elf
+Finished building: default.size.stdout
+ 
+Finished building: 01. Source.bin
+ 
+Finished building: 01. Source.list
+ 
+16:19:48 **** Incremental Build of configuration Debug for project 01. Source ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:62:0: warning: "CHIP_SELECT" redefined
+ #define CHIP_SELECT(ICM20602)  LL_GPIO_ResetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:30:0:
+../Core/Inc/BNO080.h:85:0: note: this is the location of the previous definition
+ #define CHIP_SELECT(BNO080)  LL_GPIO_ResetOutputPin(BNO080_SPI_CS_PORT, BNO080_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:63:0: warning: "CHIP_DESELECT" redefined
+ #define CHIP_DESELECT(ICM20602)  LL_GPIO_SetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:30:0:
+../Core/Inc/BNO080.h:86:0: note: this is the location of the previous definition
+ #define CHIP_DESELECT(BNO080) LL_GPIO_SetOutputPin(BNO080_SPI_CS_PORT, BNO080_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:63:0: warning: "CHIP_SELECT" redefined
+ #define CHIP_SELECT(LPS22HH)  LL_GPIO_ResetOutputPin(LPS22HH_SPI_CS_PORT, LPS22HH_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:62:0: note: this is the location of the previous definition
+ #define CHIP_SELECT(ICM20602)  LL_GPIO_ResetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:64:0: warning: "CHIP_DESELECT" redefined
+ #define CHIP_DESELECT(LPS22HH)  LL_GPIO_SetOutputPin(LPS22HH_SPI_CS_PORT, LPS22HH_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:63:0: note: this is the location of the previous definition
+ #define CHIP_DESELECT(ICM20602)  LL_GPIO_SetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:77:0: warning: "WHO_AM_I" redefined
+ #define WHO_AM_I  0x0F
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:130:0: note: this is the location of the previous definition
+ #define WHO_AM_I 0x75 //The default value of the register is 0x12.
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:96:0: warning: "TEMP_OUT_L" redefined
+ #define TEMP_OUT_L  0x2B
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:109:0: note: this is the location of the previous definition
+ #define TEMP_OUT_L 0x42
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:97:0: warning: "TEMP_OUT_H" redefined
+ #define TEMP_OUT_H  0x2C
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:108:0: note: this is the location of the previous definition
+ #define TEMP_OUT_H 0x41
+ 
+In file included from ../Core/Src/main.c:34:0:
+../Core/Inc/M8N.h:34:1: warning: useless type name in empty declaration
+ extern M8N_UBX_NAV_POSLLH;
+ ^~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:199:5: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+     printf("%d, %d, %d\n", ICM20602.gyro_x_raw, ICM20602.gyro_y_raw, ICM20602.gyro_z_raw);
+     ^~~~~~
+../Core/Src/main.c:199:5: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:199:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Core/Src/main.c:93:8: warning: unused variable 'quatRadianAccuray' [-Wunused-variable]
+  float quatRadianAccuray;
+        ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:92:8: warning: unused variable 'q' [-Wunused-variable]
+  float q[4];
+        ^
+arm-none-eabi-gcc -o "01. Source.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\FW\stm32drone\01. Source\STM32F405RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="01. Source.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 01. Source.elf
+ 
+arm-none-eabi-objdump -h -S  01.\ Source.elf  > "01. Source.list"
+arm-none-eabi-objcopy  -O binary  01.\ Source.elf  "01. Source.bin"
+arm-none-eabi-size   01.\ Source.elf 
+   text	   data	    bss	    dec	    hex	filename
+  32828	    484	   1980	  35292	   89dc	01. Source.elf
+Finished building: default.size.stdout
+ 
+Finished building: 01. Source.bin
+ 
+Finished building: 01. Source.list
+ 
+19:14:30 **** Incremental Build of configuration Debug for project 01. Source ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:62:0: warning: "CHIP_SELECT" redefined
+ #define CHIP_SELECT(ICM20602)  LL_GPIO_ResetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:30:0:
+../Core/Inc/BNO080.h:85:0: note: this is the location of the previous definition
+ #define CHIP_SELECT(BNO080)  LL_GPIO_ResetOutputPin(BNO080_SPI_CS_PORT, BNO080_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:63:0: warning: "CHIP_DESELECT" redefined
+ #define CHIP_DESELECT(ICM20602)  LL_GPIO_SetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:30:0:
+../Core/Inc/BNO080.h:86:0: note: this is the location of the previous definition
+ #define CHIP_DESELECT(BNO080) LL_GPIO_SetOutputPin(BNO080_SPI_CS_PORT, BNO080_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:63:0: warning: "CHIP_SELECT" redefined
+ #define CHIP_SELECT(LPS22HH)  LL_GPIO_ResetOutputPin(LPS22HH_SPI_CS_PORT, LPS22HH_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:62:0: note: this is the location of the previous definition
+ #define CHIP_SELECT(ICM20602)  LL_GPIO_ResetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:64:0: warning: "CHIP_DESELECT" redefined
+ #define CHIP_DESELECT(LPS22HH)  LL_GPIO_SetOutputPin(LPS22HH_SPI_CS_PORT, LPS22HH_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:63:0: note: this is the location of the previous definition
+ #define CHIP_DESELECT(ICM20602)  LL_GPIO_SetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:77:0: warning: "WHO_AM_I" redefined
+ #define WHO_AM_I  0x0F
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:130:0: note: this is the location of the previous definition
+ #define WHO_AM_I 0x75 //The default value of the register is 0x12.
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:96:0: warning: "TEMP_OUT_L" redefined
+ #define TEMP_OUT_L  0x2B
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:109:0: note: this is the location of the previous definition
+ #define TEMP_OUT_L 0x42
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:97:0: warning: "TEMP_OUT_H" redefined
+ #define TEMP_OUT_H  0x2C
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:108:0: note: this is the location of the previous definition
+ #define TEMP_OUT_H 0x41
+ 
+In file included from ../Core/Src/main.c:34:0:
+../Core/Inc/M8N.h:34:1: warning: useless type name in empty declaration
+ extern M8N_UBX_NAV_POSLLH;
+ ^~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:193:5: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+     printf("%d, %d, %d\n", ICM20602.gyro_x_raw, ICM20602.gyro_y_raw, ICM20602.gyro_z_raw);
+     ^~~~~~
+../Core/Src/main.c:193:5: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:193:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Core/Src/main.c:95:8: warning: unused variable 'quatRadianAccuray' [-Wunused-variable]
+  float quatRadianAccuray;
+        ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:94:8: warning: unused variable 'q' [-Wunused-variable]
+  float q[4];
+        ^
+arm-none-eabi-gcc -o "01. Source.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\FW\stm32drone\01. Source\STM32F405RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="01. Source.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 01. Source.elf
+ 
+arm-none-eabi-objdump -h -S  01.\ Source.elf  > "01. Source.list"
+arm-none-eabi-objcopy  -O binary  01.\ Source.elf  "01. Source.bin"
+arm-none-eabi-size   01.\ Source.elf 
+   text	   data	    bss	    dec	    hex	filename
+  32916	    484	   1980	  35380	   8a34	01. Source.elf
+Finished building: default.size.stdout
+ 
+Finished building: 01. Source.bin
+ 
+Finished building: 01. Source.list
+ 
+19:18:34 **** Incremental Build of configuration Debug for project 01. Source ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:62:0: warning: "CHIP_SELECT" redefined
+ #define CHIP_SELECT(ICM20602)  LL_GPIO_ResetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:30:0:
+../Core/Inc/BNO080.h:85:0: note: this is the location of the previous definition
+ #define CHIP_SELECT(BNO080)  LL_GPIO_ResetOutputPin(BNO080_SPI_CS_PORT, BNO080_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:63:0: warning: "CHIP_DESELECT" redefined
+ #define CHIP_DESELECT(ICM20602)  LL_GPIO_SetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:30:0:
+../Core/Inc/BNO080.h:86:0: note: this is the location of the previous definition
+ #define CHIP_DESELECT(BNO080) LL_GPIO_SetOutputPin(BNO080_SPI_CS_PORT, BNO080_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:63:0: warning: "CHIP_SELECT" redefined
+ #define CHIP_SELECT(LPS22HH)  LL_GPIO_ResetOutputPin(LPS22HH_SPI_CS_PORT, LPS22HH_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:62:0: note: this is the location of the previous definition
+ #define CHIP_SELECT(ICM20602)  LL_GPIO_ResetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:64:0: warning: "CHIP_DESELECT" redefined
+ #define CHIP_DESELECT(LPS22HH)  LL_GPIO_SetOutputPin(LPS22HH_SPI_CS_PORT, LPS22HH_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:63:0: note: this is the location of the previous definition
+ #define CHIP_DESELECT(ICM20602)  LL_GPIO_SetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:77:0: warning: "WHO_AM_I" redefined
+ #define WHO_AM_I  0x0F
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:130:0: note: this is the location of the previous definition
+ #define WHO_AM_I 0x75 //The default value of the register is 0x12.
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:96:0: warning: "TEMP_OUT_L" redefined
+ #define TEMP_OUT_L  0x2B
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:109:0: note: this is the location of the previous definition
+ #define TEMP_OUT_L 0x42
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:97:0: warning: "TEMP_OUT_H" redefined
+ #define TEMP_OUT_H  0x2C
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:108:0: note: this is the location of the previous definition
+ #define TEMP_OUT_H 0x41
+ 
+In file included from ../Core/Src/main.c:34:0:
+../Core/Inc/M8N.h:34:1: warning: useless type name in empty declaration
+ extern M8N_UBX_NAV_POSLLH;
+ ^~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:200:5: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+     printf("%d, %d, %d\n", ICM20602.gyro_x_raw, ICM20602.gyro_y_raw, ICM20602.gyro_z_raw);
+     ^~~~~~
+../Core/Src/main.c:200:5: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:200:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Core/Src/main.c:95:8: warning: unused variable 'quatRadianAccuray' [-Wunused-variable]
+  float quatRadianAccuray;
+        ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:94:8: warning: unused variable 'q' [-Wunused-variable]
+  float q[4];
+        ^
+arm-none-eabi-gcc -o "01. Source.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\FW\stm32drone\01. Source\STM32F405RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="01. Source.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 01. Source.elf
+ 
+arm-none-eabi-objdump -h -S  01.\ Source.elf  > "01. Source.list"
+arm-none-eabi-objcopy  -O binary  01.\ Source.elf  "01. Source.bin"
+arm-none-eabi-size   01.\ Source.elf 
+   text	   data	    bss	    dec	    hex	filename
+  32940	    484	   1980	  35404	   8a4c	01. Source.elf
+Finished building: default.size.stdout
+ 
+Finished building: 01. Source.bin
+ 
+Finished building: 01. Source.list
+ 
+19:26:20 **** Incremental Build of configuration Debug for project 01. Source ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F405xx -DUSE_HAL_DRIVER -DUSE_FULL_LL_DRIVER -DDEBUG -c -I../Drivers/CMSIS/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Core/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:62:0: warning: "CHIP_SELECT" redefined
+ #define CHIP_SELECT(ICM20602)  LL_GPIO_ResetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:30:0:
+../Core/Inc/BNO080.h:85:0: note: this is the location of the previous definition
+ #define CHIP_SELECT(BNO080)  LL_GPIO_ResetOutputPin(BNO080_SPI_CS_PORT, BNO080_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:63:0: warning: "CHIP_DESELECT" redefined
+ #define CHIP_DESELECT(ICM20602)  LL_GPIO_SetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:30:0:
+../Core/Inc/BNO080.h:86:0: note: this is the location of the previous definition
+ #define CHIP_DESELECT(BNO080) LL_GPIO_SetOutputPin(BNO080_SPI_CS_PORT, BNO080_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:63:0: warning: "CHIP_SELECT" redefined
+ #define CHIP_SELECT(LPS22HH)  LL_GPIO_ResetOutputPin(LPS22HH_SPI_CS_PORT, LPS22HH_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:62:0: note: this is the location of the previous definition
+ #define CHIP_SELECT(ICM20602)  LL_GPIO_ResetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:64:0: warning: "CHIP_DESELECT" redefined
+ #define CHIP_DESELECT(LPS22HH)  LL_GPIO_SetOutputPin(LPS22HH_SPI_CS_PORT, LPS22HH_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:63:0: note: this is the location of the previous definition
+ #define CHIP_DESELECT(ICM20602)  LL_GPIO_SetOutputPin(ICM20602_SPI_CS_PORT, ICM20602_SPI_CS_PIN)
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:77:0: warning: "WHO_AM_I" redefined
+ #define WHO_AM_I  0x0F
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:130:0: note: this is the location of the previous definition
+ #define WHO_AM_I 0x75 //The default value of the register is 0x12.
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:96:0: warning: "TEMP_OUT_L" redefined
+ #define TEMP_OUT_L  0x2B
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:109:0: note: this is the location of the previous definition
+ #define TEMP_OUT_L 0x42
+ 
+In file included from ../Core/Src/main.c:33:0:
+../Core/Inc/LPS22HH.h:97:0: warning: "TEMP_OUT_H" redefined
+ #define TEMP_OUT_H  0x2C
+ 
+In file included from ../Core/Src/main.c:32:0:
+../Core/Inc/ICM20602.h:108:0: note: this is the location of the previous definition
+ #define TEMP_OUT_H 0x41
+ 
+In file included from ../Core/Src/main.c:34:0:
+../Core/Inc/M8N.h:34:1: warning: useless type name in empty declaration
+ extern M8N_UBX_NAV_POSLLH;
+ ^~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:235:5: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+     printf("%d, %d, %d\n", ICM20602.gyro_x_raw, ICM20602.gyro_y_raw, ICM20602.gyro_z_raw);
+     ^~~~~~
+../Core/Src/main.c:235:5: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/main.c:235:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Core/Src/main.c:95:8: warning: unused variable 'quatRadianAccuray' [-Wunused-variable]
+  float quatRadianAccuray;
+        ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:94:8: warning: unused variable 'q' [-Wunused-variable]
+  float q[4];
+        ^
+arm-none-eabi-gcc -o "01. Source.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\FW\stm32drone\01. Source\STM32F405RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="01. Source.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 01. Source.elf
+ 
+arm-none-eabi-objdump -h -S  01.\ Source.elf  > "01. Source.list"
+arm-none-eabi-objcopy  -O binary  01.\ Source.elf  "01. Source.bin"
+arm-none-eabi-size   01.\ Source.elf 
+   text	   data	    bss	    dec	    hex	filename
+  33140	    484	   1980	  35604	   8b14	01. Source.elf
+Finished building: default.size.stdout
+ 
+Finished building: 01. Source.bin
+ 
+Finished building: 01. Source.list
+ 
+19:26:32 **** Incremental Build of configuration Debug for project 01. Source ****
+make -j8 all 
+arm-none-eabi-size   01.\ Source.elf 
+   text	   data	    bss	    dec	    hex	filename
+  33140	    484	   1980	  35604	   8b14	01. Source.elf
+Finished building: default.size.stdout
+ 
+19:26:43 **** Incremental Build of configuration Debug for project 01. Source ****
+make -j8 all 
+arm-none-eabi-size   01.\ Source.elf 
+   text	   data	    bss	    dec	    hex	filename
+  33140	    484	   1980	  35604	   8b14	01. Source.elf
+Finished building: default.size.stdout
+ 
+19:27:11 **** Incremental Build of configuration Debug for project 01. Source ****
+make -j8 all 
+arm-none-eabi-size   01.\ Source.elf 
+   text	   data	    bss	    dec	    hex	filename
+  33140	    484	   1980	  35604	   8b14	01. Source.elf
+Finished building: default.size.stdout
+ 
+19:33:33 **** Incremental Build of configuration Debug for project 01. Source ****
+make -j8 all 
+arm-none-eabi-size   01.\ Source.elf 
+   text	   data	    bss	    dec	    hex	filename
+  33140	    484	   1980	  35604	   8b14	01. Source.elf
+Finished building: default.size.stdout
+ 
+19:35:13 **** Incremental Build of configuration Debug for project 01. Source ****
+make -j8 all 
+arm-none-eabi-size   01.\ Source.elf 
+   text	   data	    bss	    dec	    hex	filename
+  33140	    484	   1980	  35604	   8b14	01. Source.elf
+Finished building: default.size.stdout
+ 
+19:36:58 **** Incremental Build of configuration Debug for project 01. Source ****
+make -j8 all 
+arm-none-eabi-size   01.\ Source.elf 
+   text	   data	    bss	    dec	    hex	filename
+  33140	    484	   1980	  35604	   8b14	01. Source.elf
+Finished building: default.size.stdout
+ 
