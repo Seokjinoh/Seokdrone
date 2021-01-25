@@ -20,6 +20,8 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "adc.h"
+#include "dma.h"
 #include "i2c.h"
 #include "spi.h"
 #include "tim.h"
@@ -97,6 +99,8 @@ int main(void)
 	float quatRadianAccuray;
 	unsigned char buf_read[16] = {0};
 	unsigned char buf_write[20] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16};
+	unsigned short adcVal;
+	float batVolt;
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -117,6 +121,7 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_DMA_Init();
   MX_TIM3_Init();
   MX_USART6_UART_Init();
   MX_SPI2_Init();
@@ -126,6 +131,7 @@ int main(void)
   MX_UART5_Init();
   MX_TIM5_Init();
   MX_I2C1_Init();
+  MX_ADC1_Init();
   /* USER CODE BEGIN 2 */
   LL_TIM_EnableCounter(TIM3);
 
@@ -145,6 +151,9 @@ int main(void)
   LL_TIM_CC_EnableChannel(TIM5, LL_TIM_CHANNEL_CH2);
   LL_TIM_CC_EnableChannel(TIM5, LL_TIM_CHANNEL_CH3);
   LL_TIM_CC_EnableChannel(TIM5, LL_TIM_CHANNEL_CH4);
+
+  HAL_ADC_Start_DMA(&hadc1, adcVal, 1);
+
 
 //  while(Is_iBus_Received() == 0)
 //  {
@@ -223,7 +232,18 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-
+	  batVolt = adcVal * 0.003619f;
+	  printf("%d\t%.2f\n", adcVal, batVolt);
+	  if(batVolt <10.0f)
+	  {
+		  TIM3->PSC = 1000;
+		  LL_TIM_CC_EnableChannel(TIM3, LL_TIM_CHANNEL_CH4);
+	  }
+	  else
+	  {
+		  LL_TIM_CC_DisableChannel(TIM3, LL_TIM_CHANNEL_CH4);
+	  }
+	  HAL_Delay(100);
 
 //	  if(BNO080_dataAvailable() == 1)
 //	  {
