@@ -1,2 +1,2 @@
 # Seokdrone
-developing a drone platform based on STM32F405
+Drone platform based on STM32F405
