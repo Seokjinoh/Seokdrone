@@ -102,6 +102,7 @@ int main(void)
 	unsigned char buf_write[20] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16};
 	unsigned short adcVal;
 	float batVolt;
+	short gyro_x_offset = -39, gyro_y_offset = -7, gyro_z_offset = -5;
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -155,80 +156,89 @@ int main(void)
 
   HAL_ADC_Start_DMA(&hadc1, &adcVal, 1);
 
+  // ICM20602 offset calibration//
+  // ICM20602 chip's address is organised 8bit-unit as Big Endian type
+  // it is valid that "value*-2" is supposed to be saved in the address (don't know the reason)
+  ICM20602_Writebyte(0x13, (gyro_x_offset*-2)>>8);
+  ICM20602_Writebyte(0x14, (gyro_x_offset*-2));
+  ICM20602_Writebyte(0x15, (gyro_y_offset*-2)>>8);
+  ICM20602_Writebyte(0x16, (gyro_y_offset*-2));
+  ICM20602_Writebyte(0x17, (gyro_z_offset*-2)>>8);
+  ICM20602_Writebyte(0x18, (gyro_z_offset*-2));
 
-  while(Is_iBus_Received() == 0)
-  {
-	  LL_TIM_CC_EnableChannel(TIM3, LL_TIM_CHANNEL_CH4);
-
-	  TIM3->PSC=3000;
-	  HAL_Delay(200);
-	  LL_TIM_CC_DisableChannel(TIM3, LL_TIM_CHANNEL_CH4);
-	  HAL_Delay(200);
-  }
-  if(iBus.SwC == 2000)
-  {
-	  LL_TIM_CC_EnableChannel(TIM3, LL_TIM_CHANNEL_CH4);
-
-	  TIM3->PSC = 1500;
-	  HAL_Delay(200);
-	  TIM3->PSC = 2000;
-	  HAL_Delay(200);
-	  TIM3->PSC = 1500;
-	  HAL_Delay(200);
-	  TIM3->PSC = 2000;
-	  HAL_Delay(200);
-	  LL_TIM_CC_DisableChannel(TIM3, LL_TIM_CHANNEL_CH4);
-
-	  ESC_Calibration();
-	  while(iBus.SwC != 1000)
-	  {
-		  Is_iBus_Received();
-		  LL_TIM_CC_EnableChannel(TIM3, LL_TIM_CHANNEL_CH4);
-
-		  TIM3->PSC = 1500;
-		  HAL_Delay(200);
-		  TIM3->PSC = 2000;
-		  HAL_Delay(200);
-		  LL_TIM_CC_DisableChannel(TIM3, LL_TIM_CHANNEL_CH4);
-	  }
-  }
-  else if(iBus.SwC == 1500)
-  {
-	  LL_TIM_CC_EnableChannel(TIM3, LL_TIM_CHANNEL_CH4);
-
-	  TIM3->PSC = 1500;
-	  HAL_Delay(200);
-	  TIM3->PSC = 2000;
-	  HAL_Delay(200);
-	  TIM3->PSC = 1500;
-	  HAL_Delay(200);
-	  TIM3->PSC = 2000;
-	  HAL_Delay(200);
-	  LL_TIM_CC_DisableChannel(TIM3, LL_TIM_CHANNEL_CH4);
-
-	  BNO080_Calibration();
-	  while(iBus.SwC != 1000)
-	  {
-		  Is_iBus_Received();
-		  LL_TIM_CC_EnableChannel(TIM3, LL_TIM_CHANNEL_CH4);
-
-		  TIM3->PSC = 1500;
-		  HAL_Delay(200);
-		  TIM3->PSC = 2000;
-		  HAL_Delay(200);
-		  LL_TIM_CC_DisableChannel(TIM3, LL_TIM_CHANNEL_CH4);
-	  }
-  }
-
-  while(Is_iBus_Throttle_Min() == 0)
-  {
-	  LL_TIM_CC_EnableChannel(TIM3, LL_TIM_CHANNEL_CH4);
-
-	  TIM3->PSC = 1000;
-	  HAL_Delay(70);
-	  LL_TIM_CC_DisableChannel(TIM3, LL_TIM_CHANNEL_CH4);
-	  HAL_Delay(70);
-  }
+//  while(Is_iBus_Received() == 0)
+//  {
+//	  LL_TIM_CC_EnableChannel(TIM3, LL_TIM_CHANNEL_CH4);
+//
+//	  TIM3->PSC=3000;
+//	  HAL_Delay(200);
+//	  LL_TIM_CC_DisableChannel(TIM3, LL_TIM_CHANNEL_CH4);
+//	  HAL_Delay(200);
+//  }
+//  if(iBus.SwC == 2000)
+//  {
+//	  LL_TIM_CC_EnableChannel(TIM3, LL_TIM_CHANNEL_CH4);
+//
+//	  TIM3->PSC = 1500;
+//	  HAL_Delay(200);
+//	  TIM3->PSC = 2000;
+//	  HAL_Delay(200);
+//	  TIM3->PSC = 1500;
+//	  HAL_Delay(200);
+//	  TIM3->PSC = 2000;
+//	  HAL_Delay(200);
+//	  LL_TIM_CC_DisableChannel(TIM3, LL_TIM_CHANNEL_CH4);
+//
+//	  ESC_Calibration();
+//	  while(iBus.SwC != 1000)
+//	  {
+//		  Is_iBus_Received();
+//		  LL_TIM_CC_EnableChannel(TIM3, LL_TIM_CHANNEL_CH4);
+//
+//		  TIM3->PSC = 1500;
+//		  HAL_Delay(200);
+//		  TIM3->PSC = 2000;
+//		  HAL_Delay(200);
+//		  LL_TIM_CC_DisableChannel(TIM3, LL_TIM_CHANNEL_CH4);
+//	  }
+//  }
+//  else if(iBus.SwC == 1500)
+//  {
+//	  LL_TIM_CC_EnableChannel(TIM3, LL_TIM_CHANNEL_CH4);
+//
+//	  TIM3->PSC = 1500;
+//	  HAL_Delay(200);
+//	  TIM3->PSC = 2000;
+//	  HAL_Delay(200);
+//	  TIM3->PSC = 1500;
+//	  HAL_Delay(200);
+//	  TIM3->PSC = 2000;
+//	  HAL_Delay(200);
+//	  LL_TIM_CC_DisableChannel(TIM3, LL_TIM_CHANNEL_CH4);
+//
+//	  BNO080_Calibration();
+//	  while(iBus.SwC != 1000)
+//	  {
+//		  Is_iBus_Received();
+//		  LL_TIM_CC_EnableChannel(TIM3, LL_TIM_CHANNEL_CH4);
+//
+//		  TIM3->PSC = 1500;
+//		  HAL_Delay(200);
+//		  TIM3->PSC = 2000;
+//		  HAL_Delay(200);
+//		  LL_TIM_CC_DisableChannel(TIM3, LL_TIM_CHANNEL_CH4);
+//	  }
+//  }
+//
+//  while(Is_iBus_Throttle_Min() == 0)
+//  {
+//	  LL_TIM_CC_EnableChannel(TIM3, LL_TIM_CHANNEL_CH4);
+//
+//	  TIM3->PSC = 1000;
+//	  HAL_Delay(70);
+//	  LL_TIM_CC_DisableChannel(TIM3, LL_TIM_CHANNEL_CH4);
+//	  HAL_Delay(70);
+//  }
 
 //  // EEPROM Read Write Test
 //  EP_PIDGain_Write(0, 1.1, 2.2, 3.3);
@@ -272,31 +282,31 @@ int main(void)
 		  LL_TIM_CC_DisableChannel(TIM3, LL_TIM_CHANNEL_CH4);
 	  }
 
-	  if(BNO080_dataAvailable() == 1)
-	  {
-		  LL_GPIO_TogglePin(GPIOC, LL_GPIO_PIN_0);
-		  q[0] = BNO080_getQuatI();
-		  q[1] = BNO080_getQuatJ();
-		  q[2] = BNO080_getQuatK();
-		  q[3] = BNO080_getQuatReal();
-		  quatRadianAccuray = BNO080_getQuatAccuracy();
-
-		  Quaternion_Update(&q[0]);
-
-//		  printf("%.2f\t%.2f\n", BNO080_Roll, BNO080_Pitch);
-		  printf("%.2f\n", BNO080_Yaw);
-	  }
-//	  if(ICM20602_DataReady() == 1)
+//	  if(BNO080_dataAvailable() == 1)
 //	  {
-//		  ICM20602_Get3AxisGyroRawData(&ICM20602.gyro_x_raw);
+//		  LL_GPIO_TogglePin(GPIOC, LL_GPIO_PIN_0);
+//		  q[0] = BNO080_getQuatI();
+//		  q[1] = BNO080_getQuatJ();
+//		  q[2] = BNO080_getQuatK();
+//		  q[3] = BNO080_getQuatReal();
+//		  quatRadianAccuray = BNO080_getQuatAccuracy();
 //
-////		  ICM20602.gyro_x = ICM20602.gyro_x_raw = 2000.f / 32768.f;
-////		  ICM20602.gyro_y = ICM20602.gyro_y_raw = 2000.f / 32768.f;
-////		  ICM20602.gyro_z = ICM20602.gyro_z_raw = 2000.f / 32768.f;
+//		  Quaternion_Update(&q[0]);
 //
-//		  printf("%d, %d, %d\n", ICM20602.gyro_x_raw, ICM20602.gyro_y_raw, ICM20602.gyro_z_raw);
-//		  //printf("%d, %d, %d\n", (int)(ICM20602.gyro_x*100), (int)(ICM20602.gyro_y*100), (int)(ICM20602.gyro_z*100));
+////		  printf("%.2f\t%.2f\n", BNO080_Roll, BNO080_Pitch);
+//		  printf("%.2f\n", BNO080_Yaw);
 //	  }
+	  if(ICM20602_DataReady() == 1)
+	  {
+		  ICM20602_Get3AxisGyroRawData(&ICM20602.gyro_x_raw);
+
+//		  ICM20602.gyro_x = ICM20602.gyro_x_raw = 2000.f / 32768.f;
+//		  ICM20602.gyro_y = ICM20602.gyro_y_raw = 2000.f / 32768.f;
+//		  ICM20602.gyro_z = ICM20602.gyro_z_raw = 2000.f / 32768.f;
+
+		  printf("%d, %d, %d\n", ICM20602.gyro_x_raw, ICM20602.gyro_y_raw, ICM20602.gyro_z_raw);
+		  //printf("%d, %d, %d\n", (int)(ICM20602.gyro_x*100), (int)(ICM20602.gyro_y*100), (int)(ICM20602.gyro_z*100));
+	  }
 //	  if(LPS22HH_DataReady() == 1)
 //	  {
 //		  LPS22HH_GetPressure(&LPS22HH.pressure_raw);
