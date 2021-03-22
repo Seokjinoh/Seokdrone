@@ -72,6 +72,7 @@ extern uint8_t m8n_rx_buf[36];
 extern uint8_t m8n_rx_cplt_flag;
 extern uint8_t ibus_rx_buf[32];
 extern uint8_t ibus_rx_cplt_flag;
+extern uint8_t uart1_rx_data;
 extern M8N_UBX_NAV_POSLLH posllh;
 /* USER CODE END PV */
 
@@ -134,6 +135,7 @@ int main(void)
   MX_TIM5_Init();
   MX_I2C1_Init();
   MX_ADC1_Init();
+  MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
   LL_TIM_EnableCounter(TIM3);
 
@@ -155,6 +157,10 @@ int main(void)
   LL_TIM_CC_EnableChannel(TIM5, LL_TIM_CHANNEL_CH4);
 
   HAL_ADC_Start_DMA(&hadc1, &adcVal, 1);
+
+  //after calling this func at this point, callback function of rxreceived will start to be called when UART RX received.
+  //so, this line is just a preparation... (nothing received here, of course)
+  HAL_UART_Receive_IT(&huart1, &uart1_rx_data, 1);
 
   // ICM20602 offset calibration//
   // ICM20602 chip's address is organised 8bit-unit as Big Endian type
@@ -567,6 +573,16 @@ void BNO080_Calibration(void)
 	BNO080_Initialization();
 	BNO080_enableRotationVector(2500); //Send data update every 2.5ms (400Hz)
 }
+
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+{
+	if(huart->Instance == USART1)
+	{
+		HAL_UART_Receive_IT(&huart1, &uart1_rx_data, 1);
+		HAL_UART_Transmit_IT(&huart1, &uart1_rx_data, 1);
+	}
+}
+
 /* USER CODE END 4 */
 
 /**
