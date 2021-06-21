@@ -1,0 +1,138 @@
+2021-03-22 22:49:49,784 DEBUG MissionPlanner.Utilities.ThemeManager - Theme set to None (:0) [1]
+2021-03-22 22:54:13,027 DEBUG MissionPlanner.Utilities.ThemeManager - Theme set to None (:0) [1]
+2021-03-22 22:55:39,663 DEBUG MissionPlanner.Utilities.ThemeManager - Theme set to None (:0) [1]
+2021-03-22 22:55:55,835  INFO MissionPlanner.Sikradio - Connect btr 0 baud 57600 (:0) [1]
+2021-03-22 22:55:55,848  INFO MissionPlanner.Sikradio - doConnect retry (:0) [1]
+2021-03-22 22:55:59,302  INFO MissionPlanner.Sikradio - Connect btr 0 baud 57600 (:0) [1]
+2021-03-22 22:55:59,303  INFO MissionPlanner.Sikradio - doConnect retry (:0) [1]
+2021-03-22 22:56:02,742  INFO MissionPlanner.Sikradio - Connect btr 0 baud 57600 (:0) [1]
+2021-03-22 22:56:02,744  INFO MissionPlanner.Sikradio - doConnect retry (:0) [1]
+2021-03-22 22:56:06,184  INFO MissionPlanner.Sikradio - Connect btr 0 baud 57600 (:0) [1]
+2021-03-22 22:56:10,217  INFO MissionPlanner.Sikradio - Doing Command ATO (:0) [1]
+2021-03-22 22:56:11,219  INFO MissionPlanner.Sikradio - Doing Command ATO (:0) [1]
+2021-03-22 22:56:13,751  INFO MissionPlanner.Comms.SerialPort - Closing port COM6 (:0) [1]
+2021-03-22 22:56:20,127  INFO MissionPlanner.Sikradio - Connect btr 4 baud 115200 (:0) [1]
+2021-03-22 22:56:20,128  INFO MissionPlanner.Sikradio - Connect first response OK
+ 4 (:0) [1]
+2021-03-22 22:56:20,130  INFO MissionPlanner.Sikradio - Doing Command AT&T (:0) [1]
+2021-03-22 22:56:21,135  INFO MissionPlanner.Sikradio - Doing Command AT&T (:0) [1]
+2021-03-22 22:56:22,137  INFO MissionPlanner.Sikradio -  (:0) [1]
+2021-03-22 22:56:22,138  INFO MissionPlanner.Sikradio - Doing Command ATI (:0) [1]
+2021-03-22 22:56:22,142  INFO MissionPlanner.Sikradio - SiK 1.9 on HM-TRP
+ (:0) [1]
+2021-03-22 22:56:22,142  INFO MissionPlanner.Sikradio - Connect Version: SiK 1.9 on HM-TRP
+ (:0) [1]
+2021-03-22 22:56:22,143  INFO MissionPlanner.Sikradio - Doing Command AT&T (:0) [1]
+2021-03-22 22:56:23,147  INFO MissionPlanner.Sikradio - Doing Command AT&T (:0) [1]
+2021-03-22 22:56:24,149  INFO MissionPlanner.Sikradio -  (:0) [1]
+2021-03-22 22:56:24,150  INFO MissionPlanner.Sikradio - Doing Command ATI (:0) [1]
+2021-03-22 22:56:24,157  INFO MissionPlanner.Sikradio - SiK 1.9 on HM-TRP
+ (:0) [1]
+2021-03-22 22:56:24,159  INFO MissionPlanner.Sikradio - Doing Command ATI3 (:0) [1]
+2021-03-22 22:56:24,162  INFO MissionPlanner.Sikradio - 67
+ (:0) [1]
+2021-03-22 22:56:24,164  INFO MissionPlanner.Sikradio - Doing Command ATI2 (:0) [1]
+2021-03-22 22:56:24,167  INFO MissionPlanner.Sikradio - 78
+ (:0) [1]
+2021-03-22 22:56:24,735  INFO MissionPlanner.Sikradio - Doing Command AT&E? (:0) [1]
+2021-03-22 22:56:24,737  INFO MissionPlanner.Sikradio - ERROR
+ (:0) [1]
+2021-03-22 22:56:24,740  INFO MissionPlanner.Sikradio - Doing Command ATI7 (:0) [1]
+2021-03-22 22:56:24,756  INFO MissionPlanner.Sikradio - L/R RSSI: 78/0  L/R noise: 77/0 pkts: 0  txe=0 rxe=0 stx=0 srx=0 ecc=0/0 temp=-276 dco=0
+ (:0) [1]
+2021-03-22 22:56:24,758  INFO MissionPlanner.Sikradio - Doing Command ATI5 (:0) [1]
+2021-03-22 22:56:25,789  INFO MissionPlanner.Sikradio - S0:FORMAT=25
+S1:SERIAL_SPEED=115
+S2:AIR_SPEED=250
+S3:NETID=25
+S4:TXPOWER=11
+S5:ECC=0
+S6:MAVLINK=0
+S7:OPPRESEND=0
+S8:MIN_FREQ=433050
+S9:MAX_FREQ=434790
+S10:NUM_CHANNELS=10
+S11:DUTY_CYCLE=100
+S12:LBT_RSSI=0
+S13:MANCHESTER=0
+S14:RTSCTS=0
+S15:MAX_WINDOW=131
+ (:0) [1]
+2021-03-22 22:56:25,839  INFO MissionPlanner.Sikradio - Doing Command RTI (:0) [1]
+2021-03-22 22:56:26,841  INFO MissionPlanner.Sikradio - Doing Command RTI (:0) [1]
+2021-03-22 22:56:27,843  INFO MissionPlanner.Sikradio -  (:0) [1]
+2021-03-22 22:56:27,845  INFO MissionPlanner.Sikradio - Doing Command RTI2 (:0) [1]
+2021-03-22 22:56:28,850  INFO MissionPlanner.Sikradio - Doing Command RTI2 (:0) [1]
+2021-03-22 22:56:29,852  INFO MissionPlanner.Sikradio -  (:0) [1]
+2021-03-22 22:56:29,854  INFO MissionPlanner.Sikradio - Doing Command RT&E? (:0) [1]
+2021-03-22 22:56:30,858  INFO MissionPlanner.Sikradio - Doing Command RT&E? (:0) [1]
+2021-03-22 22:56:31,860  INFO MissionPlanner.Sikradio -  (:0) [1]
+2021-03-22 22:56:31,862  INFO MissionPlanner.Sikradio - Doing Command RTI5 (:0) [1]
+2021-03-22 22:56:32,868  INFO MissionPlanner.Sikradio -  (:0) [1]
+2021-03-22 22:56:32,868  INFO MissionPlanner.Sikradio - Odd config line : (:0) [1]
+2021-03-22 22:56:32,872  INFO MissionPlanner.Sikradio - Doing Command ATO (:0) [1]
+2021-03-22 22:56:33,876  INFO MissionPlanner.Sikradio - Doing Command ATO (:0) [1]
+2021-03-22 22:56:34,878  INFO MissionPlanner.Comms.SerialPort - Closing port COM6 (:0) [1]
+2021-03-22 22:57:12,541  INFO MissionPlanner.Comms.SerialPort - Closing port COM6 (:0) [1]
+2021-03-22 22:57:20,584  INFO MissionPlanner.Sikradio - Connect btr 4 baud 115200 (:0) [1]
+2021-03-22 22:57:20,586  INFO MissionPlanner.Sikradio - Connect first response OK
+ 4 (:0) [1]
+2021-03-22 22:57:20,591  INFO MissionPlanner.Sikradio - Doing Command AT&T (:0) [1]
+2021-03-22 22:57:21,603  INFO MissionPlanner.Sikradio - Doing Command AT&T (:0) [1]
+2021-03-22 22:57:22,607  INFO MissionPlanner.Sikradio -  (:0) [1]
+2021-03-22 22:57:22,608  INFO MissionPlanner.Sikradio - Doing Command ATI (:0) [1]
+2021-03-22 22:57:22,616  INFO MissionPlanner.Sikradio - SiK 1.9 on HM-TRP
+ (:0) [1]
+2021-03-22 22:57:22,616  INFO MissionPlanner.Sikradio - Connect Version: SiK 1.9 on HM-TRP
+ (:0) [1]
+2021-03-22 22:57:22,618  INFO MissionPlanner.Sikradio - Doing Command AT&T (:0) [1]
+2021-03-22 22:57:23,625  INFO MissionPlanner.Sikradio - Doing Command AT&T (:0) [1]
+2021-03-22 22:57:24,627  INFO MissionPlanner.Sikradio -  (:0) [1]
+2021-03-22 22:57:24,629  INFO MissionPlanner.Sikradio - Doing Command ATI (:0) [1]
+2021-03-22 22:57:24,635  INFO MissionPlanner.Sikradio - SiK 1.9 on HM-TRP
+ (:0) [1]
+2021-03-22 22:57:24,637  INFO MissionPlanner.Sikradio - Doing Command ATI3 (:0) [1]
+2021-03-22 22:57:24,640  INFO MissionPlanner.Sikradio - 67
+ (:0) [1]
+2021-03-22 22:57:24,641  INFO MissionPlanner.Sikradio - Doing Command ATI2 (:0) [1]
+2021-03-22 22:57:24,644  INFO MissionPlanner.Sikradio - 78
+ (:0) [1]
+2021-03-22 22:57:25,205  INFO MissionPlanner.Sikradio - Doing Command AT&E? (:0) [1]
+2021-03-22 22:57:25,207  INFO MissionPlanner.Sikradio - ERROR
+ (:0) [1]
+2021-03-22 22:57:25,209  INFO MissionPlanner.Sikradio - Doing Command ATI7 (:0) [1]
+2021-03-22 22:57:25,224  INFO MissionPlanner.Sikradio - L/R RSSI: 70/0  L/R noise: 70/0 pkts: 0  txe=0 rxe=0 stx=0 srx=0 ecc=0/0 temp=-276 dco=0
+ (:0) [1]
+2021-03-22 22:57:25,227  INFO MissionPlanner.Sikradio - Doing Command ATI5 (:0) [1]
+2021-03-22 22:57:26,260  INFO MissionPlanner.Sikradio - S0:FORMAT=25
+S1:SERIAL_SPEED=115
+S2:AIR_SPEED=250
+S3:NETID=25
+S4:TXPOWER=11
+S5:ECC=0
+S6:MAVLINK=0
+S7:OPPRESEND=0
+S8:MIN_FREQ=433050
+S9:MAX_FREQ=434790
+S10:NUM_CHANNELS=10
+S11:DUTY_CYCLE=100
+S12:LBT_RSSI=0
+S13:MANCHESTER=0
+S14:RTSCTS=0
+S15:MAX_WINDOW=131
+ (:0) [1]
+2021-03-22 22:57:26,278  INFO MissionPlanner.Sikradio - Doing Command RTI (:0) [1]
+2021-03-22 22:57:27,279  INFO MissionPlanner.Sikradio - Doing Command RTI (:0) [1]
+2021-03-22 22:57:28,283  INFO MissionPlanner.Sikradio -  (:0) [1]
+2021-03-22 22:57:28,285  INFO MissionPlanner.Sikradio - Doing Command RTI2 (:0) [1]
+2021-03-22 22:57:29,293  INFO MissionPlanner.Sikradio - Doing Command RTI2 (:0) [1]
+2021-03-22 22:57:30,299  INFO MissionPlanner.Sikradio -  (:0) [1]
+2021-03-22 22:57:30,300  INFO MissionPlanner.Sikradio - Doing Command RT&E? (:0) [1]
+2021-03-22 22:57:31,304  INFO MissionPlanner.Sikradio - Doing Command RT&E? (:0) [1]
+2021-03-22 22:57:32,308  INFO MissionPlanner.Sikradio -  (:0) [1]
+2021-03-22 22:57:32,309  INFO MissionPlanner.Sikradio - Doing Command RTI5 (:0) [1]
+2021-03-22 22:57:33,312  INFO MissionPlanner.Sikradio -  (:0) [1]
+2021-03-22 22:57:33,312  INFO MissionPlanner.Sikradio - Odd config line : (:0) [1]
+2021-03-22 22:57:33,317  INFO MissionPlanner.Sikradio - Doing Command ATO (:0) [1]
+2021-03-22 22:57:34,322  INFO MissionPlanner.Sikradio - Doing Command ATO (:0) [1]
+2021-03-22 22:57:35,324  INFO MissionPlanner.Comms.SerialPort - Closing port COM5 (:0) [1]

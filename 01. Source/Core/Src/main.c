@@ -73,6 +73,10 @@ extern uint8_t m8n_rx_cplt_flag;
 extern uint8_t ibus_rx_buf[32];
 extern uint8_t ibus_rx_cplt_flag;
 extern uint8_t uart1_rx_data;
+extern uint8_t tim7_20ms_flag;
+
+uint8_t telemetry_tx_buf[20];
+
 extern M8N_UBX_NAV_POSLLH posllh;
 /* USER CODE END PV */
 
@@ -136,6 +140,7 @@ int main(void)
   MX_I2C1_Init();
   MX_ADC1_Init();
   MX_USART1_UART_Init();
+  MX_TIM7_Init();
   /* USER CODE BEGIN 2 */
   LL_TIM_EnableCounter(TIM3);
 
@@ -160,7 +165,11 @@ int main(void)
 
   //after calling this func at this point, callback function of rxreceived will start to be called when UART RX received.
   //so, this line is just a preparation... (nothing received here, of course)
+  // GCS ?�� PC 3DR Telemetry UART
   HAL_UART_Receive_IT(&huart1, &uart1_rx_data, 1);
+
+  LL_TIM_EnableCounter(TIM7);
+  LL_TIM_EnableIT_UPDATE(TIM7);
 
   // ICM20602 offset calibration//
   // ICM20602 chip's address is organised 8bit-unit as Big Endian type
@@ -265,7 +274,7 @@ int main(void)
 
   LL_TIM_CC_DisableChannel(TIM3, LL_TIM_CHANNEL_CH4);
 
-  printf("Start\n");
+  //printf("Start\n");
 
   /* USER CODE END 2 */
 
@@ -276,6 +285,48 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+	  if(tim7_20ms_flag == 1)
+	  {
+		  // protecting from missing received message for GCS, gap between TX sending is determined as 20ms
+		  telemetry_tx_buf[0] = 0x46;
+		  telemetry_tx_buf[1] = 0x43;
+
+		  telemetry_tx_buf[2] = 0x10;
+
+		  telemetry_tx_buf[3] = (short)(BNO080_Roll*100);
+		  telemetry_tx_buf[4] = ((short)(BNO080_Roll*100))>>8;
+
+		  telemetry_tx_buf[5] = (short)(BNO080_Pitch*100);
+		  telemetry_tx_buf[6] = ((short)(BNO080_Pitch*100))>>8;
+
+		  telemetry_tx_buf[7] = (unsigned short)(BNO080_Yaw*100);
+		  telemetry_tx_buf[8] = ((unsigned short)(BNO080_Yaw*100))>>8;
+
+		  telemetry_tx_buf[9] = (short)(LPS22HH.baroAltFilt*10);
+		  telemetry_tx_buf[10] = ((short)(LPS22HH.baroAltFilt*10))>>8;
+
+		  telemetry_tx_buf[11] = (short)((iBus.RH-1500)*0.1f*100);
+		  telemetry_tx_buf[12] = ((short)((iBus.RH-1500)*0.1f*100))>>8;
+
+		  telemetry_tx_buf[13] = (short)((iBus.RV-1500)*0.1f*100);
+		  telemetry_tx_buf[14] = ((short)((iBus.RV-1500)*0.1f*100))>>8;
+
+		  telemetry_tx_buf[15] = (unsigned short)((iBus.LH-1000)*0.36f*100);
+		  telemetry_tx_buf[16] = ((unsigned short)((iBus.LH-1000)*0.36f*100))>>8;
+
+		  telemetry_tx_buf[17] = 0x00;
+		  telemetry_tx_buf[18] = 0x00;
+
+		  telemetry_tx_buf[19] = 0xff;
+
+		  for (int i = 0; i < 19; i++)
+	      {
+			  telemetry_tx_buf[19] = telemetry_tx_buf[19] - telemetry_tx_buf[i];
+		  }
+
+		  HAL_UART_Transmit_IT(&huart1, &telemetry_tx_buf[0], 20);
+	  }
+
 	  batVolt = adcVal * 0.003619f;
 	  //printf("Battery V: (ADC) %d  (REAL) %.2f\n", adcVal, batVolt);
 	  if(batVolt <10.0f)
@@ -288,78 +339,78 @@ int main(void)
 		  LL_TIM_CC_DisableChannel(TIM3, LL_TIM_CHANNEL_CH4);
 	  }
 
-//	  if(BNO080_dataAvailable() == 1)
-//	  {
-//		  LL_GPIO_TogglePin(GPIOC, LL_GPIO_PIN_0);
-//		  q[0] = BNO080_getQuatI();
-//		  q[1] = BNO080_getQuatJ();
-//		  q[2] = BNO080_getQuatK();
-//		  q[3] = BNO080_getQuatReal();
-//		  quatRadianAccuray = BNO080_getQuatAccuracy();
-//
-//		  Quaternion_Update(&q[0]);
-//
-////		  printf("%.2f\t%.2f\n", BNO080_Roll, BNO080_Pitch);
+	  if(BNO080_dataAvailable() == 1)
+	  {
+		  LL_GPIO_TogglePin(GPIOC, LL_GPIO_PIN_0);
+		  q[0] = BNO080_getQuatI();
+		  q[1] = BNO080_getQuatJ();
+		  q[2] = BNO080_getQuatK();
+		  q[3] = BNO080_getQuatReal();
+		  quatRadianAccuray = BNO080_getQuatAccuracy();
+
+		  Quaternion_Update(&q[0]);
+
+//		  printf("%.2f\t%.2f\n", BNO080_Roll, BNO080_Pitch);
 //		  printf("%.2f\n", BNO080_Yaw);
-//	  }
+	  }
 	  if(ICM20602_DataReady() == 1)
 	  {
 		  ICM20602_Get3AxisGyroRawData(&ICM20602.gyro_x_raw);
 
-//		  ICM20602.gyro_x = ICM20602.gyro_x_raw = 2000.f / 32768.f;
-//		  ICM20602.gyro_y = ICM20602.gyro_y_raw = 2000.f / 32768.f;
-//		  ICM20602.gyro_z = ICM20602.gyro_z_raw = 2000.f / 32768.f;
+		  ICM20602.gyro_x = ICM20602.gyro_x_raw = 2000.f / 32768.f;
+		  ICM20602.gyro_y = ICM20602.gyro_y_raw = 2000.f / 32768.f;
+		  ICM20602.gyro_z = ICM20602.gyro_z_raw = 2000.f / 32768.f;
 
-		  printf("%d, %d, %d\n", ICM20602.gyro_x_raw, ICM20602.gyro_y_raw, ICM20602.gyro_z_raw);
+		  //printf("%d, %d, %d\n", ICM20602.gyro_x_raw, ICM20602.gyro_y_raw, ICM20602.gyro_z_raw);
 		  //printf("%d, %d, %d\n", (int)(ICM20602.gyro_x*100), (int)(ICM20602.gyro_y*100), (int)(ICM20602.gyro_z*100));
 	  }
-//	  if(LPS22HH_DataReady() == 1)
-//	  {
-//		  LPS22HH_GetPressure(&LPS22HH.pressure_raw);
-//		  LPS22HH_GetTemperature(&LPS22HH.temperature_raw);
-//
-//		  LPS22HH.baroAlt = getAltitude2(LPS22HH.pressure_raw/4096.f, LPS22HH.temperature_raw/100.f);
-//#define X 0.90f
-//		  LPS22HH.baroAltFilt = LPS22HH.baroAltFilt * X + LPS22HH.baroAlt * (1.0f - X);
-//
-//		  printf("%d, %d\n", (int)(LPS22HH.baroAlt*100),(int)(LPS22HH.baroAltFilt*100));
-//	  }
+	  if(LPS22HH_DataReady() == 1)
+	  {
+		  LPS22HH_GetPressure(&LPS22HH.pressure_raw);
+		  LPS22HH_GetTemperature(&LPS22HH.temperature_raw);
 
-//	  if(m8n_rx_cplt_flag == 1)
-//	  {
-//		  m8n_rx_cplt_flag = 0;
-//
-//		  if(M8N_UBX_CHKSUM_Check(&m8n_rx_buf[0],36) == 1)
-//		  {
-//			  LL_GPIO_TogglePin(GPIOC, LL_GPIO_PIN_2);
-//			  M8N_UBX_NAV_POSLLH_Parsing(&m8n_rx_buf[0],&posllh);
-//
-//			  printf("LAT: %ld\tLON: %ld\tHeight: %ld\n", posllh.lat, posllh.lon, posllh.height);
-//		  }
-//	  }
+		  LPS22HH.baroAlt = getAltitude2(LPS22HH.pressure_raw/4096.f, LPS22HH.temperature_raw/100.f);
+#define X 0.90f
+		  LPS22HH.baroAltFilt = LPS22HH.baroAltFilt * X + LPS22HH.baroAlt * (1.0f - X);
 
-//	  if(ibus_rx_cplt_flag == 1)
-//	  {
-//		  ibus_rx_cplt_flag = 0;
-//		  if(iBus_Check_CHKSUM(&ibus_rx_buf[0],32) == 1)
-//		  {
-//			  LL_GPIO_TogglePin(GPIOC, LL_GPIO_PIN_2);
-//
-//			  iBus_Parsing(&ibus_rx_buf[0], &iBus);
-//
-//			  if(iBus_isActiveFailsafe(&iBus) == 1)
-//			  {
-//				  LL_TIM_CC_EnableChannel(TIM3, LL_TIM_CHANNEL_CH4);
-//			  }
-//			  else
-//			  {
-//				  LL_TIM_CC_DisableChannel(TIM3, LL_TIM_CHANNEL_CH4);
-//			  }
-////			  printf("%d\t%d\t%d\t%d\t%d\t%d\n",
-////					  iBus.RH, iBus.RV, iBus.LV, iBus.LH, iBus.SwA, iBus.SwC);
-////			  HAL_Delay(30);
-//		  }
-//	  }
+		  //printf("%d, %d\n", (int)(LPS22HH.baroAlt*100),(int)(LPS22HH.baroAltFilt*100));
+	  }
+
+	  if(m8n_rx_cplt_flag == 1)
+	  {
+		  m8n_rx_cplt_flag = 0;
+
+		  if(M8N_UBX_CHKSUM_Check(&m8n_rx_buf[0],36) == 1)
+		  {
+			  LL_GPIO_TogglePin(GPIOC, LL_GPIO_PIN_2);
+			  M8N_UBX_NAV_POSLLH_Parsing(&m8n_rx_buf[0],&posllh);
+
+			  //printf("LAT: %ld\tLON: %ld\tHeight: %ld\n", posllh.lat, posllh.lon, posllh.height);
+		  }
+	  }
+
+	  if(ibus_rx_cplt_flag == 1)
+	  {
+		  ibus_rx_cplt_flag = 0;
+		  if(iBus_Check_CHKSUM(&ibus_rx_buf[0],32) == 1)
+		  {
+			  LL_GPIO_TogglePin(GPIOC, LL_GPIO_PIN_2);
+
+			  iBus_Parsing(&ibus_rx_buf[0], &iBus);
+
+			  if(iBus_isActiveFailsafe(&iBus) == 1)
+			  {
+				  LL_TIM_CC_EnableChannel(TIM3, LL_TIM_CHANNEL_CH4);
+			  }
+			  else
+			  {
+				  LL_TIM_CC_DisableChannel(TIM3, LL_TIM_CHANNEL_CH4);
+			  }
+//			  printf("%d\t%d\t%d\t%d\t%d\t%d\n",
+//					  iBus.RH, iBus.RV, iBus.LV, iBus.LH, iBus.SwA, iBus.SwC);
+//			  HAL_Delay(30);
+		  }
+	  }
   }
   /* USER CODE END 3 */
 }
@@ -576,10 +627,11 @@ void BNO080_Calibration(void)
 
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
+	// GCS
 	if(huart->Instance == USART1)
 	{
+		// receive data to second argument, uart1_rx_data
 		HAL_UART_Receive_IT(&huart1, &uart1_rx_data, 1);
-		HAL_UART_Transmit_IT(&huart1, &uart1_rx_data, 1);
 	}
 }
 
