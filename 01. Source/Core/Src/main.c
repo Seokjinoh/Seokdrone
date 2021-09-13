@@ -64,6 +64,7 @@ int _write(int file, char* p, int len)
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
+extern M8N_UBX_NAV_POSLLH posllh;
 extern uint8_t	uart6_rx_flag;
 extern uint8_t 	uart6_rx_data;
 extern uint8_t	uart4_rx_flag;
@@ -74,10 +75,10 @@ extern uint8_t ibus_rx_buf[32];
 extern uint8_t ibus_rx_cplt_flag;
 extern uint8_t uart1_rx_data;
 extern uint8_t tim7_20ms_flag;
+extern uint8_t tim7_100ms_flag;
 
-uint8_t telemetry_tx_buf[20];
-
-extern M8N_UBX_NAV_POSLLH posllh;
+uint8_t telemetry_tx_buf[40];
+float batVolt;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -87,6 +88,8 @@ int Is_iBus_Throttle_Min(void);
 void ESC_Calibration(void);
 int Is_iBus_Received(void);
 void BNO080_Calibration(void);
+void Encode_Msg_AHRS(unsigned char* telemetry_tx_buf);
+void Encode_Msg_GPS(unsigned char* telemetry_tx_buf);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -106,7 +109,8 @@ int main(void)
 	unsigned char buf_read[16] = {0};
 	unsigned char buf_write[20] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16};
 	unsigned short adcVal;
-	float batVolt;
+	unsigned short test1;
+	unsigned short test2;
 	short gyro_x_offset = -39, gyro_y_offset = -7, gyro_z_offset = -5;
   /* USER CODE END 1 */
 
@@ -285,44 +289,21 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  if(tim7_20ms_flag == 1)
+	  if(tim7_20ms_flag == 1 && tim7_100ms_flag != 1) // To handle non-blocking methond (Transmit_IT)
 	  {
+		  tim7_20ms_flag = 0;
 		  // protecting from missing received message for GCS, gap between TX sending is determined as 20ms
-		  telemetry_tx_buf[0] = 0x46;
-		  telemetry_tx_buf[1] = 0x43;
+		  Encode_Msg_AHRS(&telemetry_tx_buf[0]);
+		  HAL_UART_Transmit_IT(&huart1, &telemetry_tx_buf[0], 20);
+	  }
 
-		  telemetry_tx_buf[2] = 0x10;
+	  else if(tim7_20ms_flag == 1 && tim7_100ms_flag == 1) // To handle non-blocking methond (Transmit_IT)
+	  {
+		  tim7_20ms_flag = 0;
+		  tim7_100ms_flag = 0;
 
-		  telemetry_tx_buf[3] = (short)(BNO080_Roll*100);
-		  telemetry_tx_buf[4] = ((short)(BNO080_Roll*100))>>8;
-
-		  telemetry_tx_buf[5] = (short)(BNO080_Pitch*100);
-		  telemetry_tx_buf[6] = ((short)(BNO080_Pitch*100))>>8;
-
-		  telemetry_tx_buf[7] = (unsigned short)(BNO080_Yaw*100);
-		  telemetry_tx_buf[8] = ((unsigned short)(BNO080_Yaw*100))>>8;
-
-		  telemetry_tx_buf[9] = (short)(LPS22HH.baroAltFilt*10);
-		  telemetry_tx_buf[10] = ((short)(LPS22HH.baroAltFilt*10))>>8;
-
-		  telemetry_tx_buf[11] = (short)((iBus.RH-1500)*0.1f*100);
-		  telemetry_tx_buf[12] = ((short)((iBus.RH-1500)*0.1f*100))>>8;
-
-		  telemetry_tx_buf[13] = (short)((iBus.RV-1500)*0.1f*100);
-		  telemetry_tx_buf[14] = ((short)((iBus.RV-1500)*0.1f*100))>>8;
-
-		  telemetry_tx_buf[15] = (unsigned short)((iBus.LH-1000)*0.36f*100);
-		  telemetry_tx_buf[16] = ((unsigned short)((iBus.LH-1000)*0.36f*100))>>8;
-
-		  telemetry_tx_buf[17] = 0x00;
-		  telemetry_tx_buf[18] = 0x00;
-
-		  telemetry_tx_buf[19] = 0xff;
-
-		  for (int i = 0; i < 19; i++)
-	      {
-			  telemetry_tx_buf[19] = telemetry_tx_buf[19] - telemetry_tx_buf[i];
-		  }
+		  //Encode_Msg_AHRS(&telemetry_tx_buf[0]);
+		  Encode_Msg_GPS(&telemetry_tx_buf[0]);
 
 		  HAL_UART_Transmit_IT(&huart1, &telemetry_tx_buf[0], 20);
 	  }
@@ -545,7 +526,7 @@ void BNO080_Calibration(void)
 			else if (accuracy == 2) printf("Medium\t");
 			else if (accuracy == 3) printf("High\t");
 
-			printf("\t%f,%f,%f,%f,", quatI, quatI, quatI, quatReal);
+			printf("\t%f,%f,%f,%f,", quatI, quatJ, quatK, quatReal);
 			if (sensorAccuracy == 0) printf("Unreliable\n");
 			else if (sensorAccuracy == 1) printf("Low\n");
 			else if (sensorAccuracy == 2) printf("Medium\n");
@@ -635,6 +616,81 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 	}
 }
 
+void Encode_Msg_AHRS(unsigned char* telemetry_tx_buf)
+{
+	  telemetry_tx_buf[0] = 0x46;
+	  telemetry_tx_buf[1] = 0x43;
+
+	  telemetry_tx_buf[2] = 0x10;
+
+	  telemetry_tx_buf[3] = (short)(BNO080_Roll*100);
+	  telemetry_tx_buf[4] = ((short)(BNO080_Roll*100))>>8;
+
+	  telemetry_tx_buf[5] = (short)(BNO080_Pitch*100);
+	  telemetry_tx_buf[6] = ((short)(BNO080_Pitch*100))>>8;
+
+	  telemetry_tx_buf[7] = (unsigned short)(BNO080_Yaw*100);
+	  telemetry_tx_buf[8] = ((unsigned short)(BNO080_Yaw*100))>>8;
+
+	  telemetry_tx_buf[9] = (short)(LPS22HH.baroAltFilt*10);
+	  telemetry_tx_buf[10] = ((short)(LPS22HH.baroAltFilt*10))>>8;
+
+	  telemetry_tx_buf[11] = (short)((iBus.RH-1500)*0.1f*100);
+	  telemetry_tx_buf[12] = ((short)((iBus.RH-1500)*0.1f*100))>>8;
+
+	  telemetry_tx_buf[13] = (short)((iBus.RV-1500)*0.1f*100);
+	  telemetry_tx_buf[14] = ((short)((iBus.RV-1500)*0.1f*100))>>8;
+
+	  telemetry_tx_buf[15] = (unsigned short)((iBus.LH-1000)*0.36f*100);
+	  telemetry_tx_buf[16] = ((unsigned short)((iBus.LH-1000)*0.36f*100))>>8;
+
+	  telemetry_tx_buf[17] = 0x00;
+	  telemetry_tx_buf[18] = 0x00;
+
+	  telemetry_tx_buf[19] = 0xff;
+
+	  for (int i = 0; i < 19; i++)
+	  {
+		  telemetry_tx_buf[19] = telemetry_tx_buf[19] - telemetry_tx_buf[i];
+	  }
+}
+
+void Encode_Msg_GPS(unsigned char* telemetry_tx_buf)
+{
+	  telemetry_tx_buf[0] = 0x46;
+	  telemetry_tx_buf[1] = 0x43;
+
+	  telemetry_tx_buf[2] = 0x11;
+
+	  telemetry_tx_buf[3] = posllh.lat;
+	  telemetry_tx_buf[4] = posllh.lat>>8;
+	  telemetry_tx_buf[5] = posllh.lat>>16;
+	  telemetry_tx_buf[6] = posllh.lat>>24;
+
+	  telemetry_tx_buf[7] = posllh.lon;
+	  telemetry_tx_buf[8] = posllh.lon>>8;
+	  telemetry_tx_buf[9] = posllh.lon>>16;
+	  telemetry_tx_buf[10] = posllh.lon>>24;
+
+	  telemetry_tx_buf[11] = (unsigned short)(batVolt*100);
+	  telemetry_tx_buf[12] = ((unsigned short)(batVolt*100))>>8;
+
+	  telemetry_tx_buf[13] = iBus.SwA == 1000 ? 0 : 1;
+	  telemetry_tx_buf[14] = iBus.SwC == 1000 ? 0 : iBus.SwC == 1500 ? 1:2;
+
+	  telemetry_tx_buf[15] = iBus_isActiveFailsafe(&iBus);
+
+	  telemetry_tx_buf[16] = 0x00;
+	  telemetry_tx_buf[17] = 0x00;
+	  telemetry_tx_buf[18] = 0x00;
+
+	  telemetry_tx_buf[19] = 0xff;
+
+	  for (int i = 0; i < 19; i++)
+	  {
+		  telemetry_tx_buf[19] = telemetry_tx_buf[19] - telemetry_tx_buf[i];
+	  }
+}
 /* USER CODE END 4 */
 
 /**

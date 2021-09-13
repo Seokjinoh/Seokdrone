@@ -58,6 +58,7 @@ uint8_t ibus_rx_cplt_flag = 0;
 uint8_t uart1_rx_data = 0;
 
 uint8_t tim7_20ms_flag = 0;
+uint8_t tim7_100ms_flag = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -336,14 +337,21 @@ void TIM7_IRQHandler(void)
 {
   /* USER CODE BEGIN TIM7_IRQn 0 */
 	static unsigned char tim7_20ms_count = 0;
+	static unsigned char tim7_100ms_count = 0;
 	if(LL_TIM_IsActiveFlag_UPDATE(TIM7))
 	{
 		LL_TIM_ClearFlag_UPDATE(TIM7);
 		tim7_20ms_count++;
+		tim7_100ms_count++;
 		if(tim7_20ms_count==20)
 		{
 			tim7_20ms_count=0;
 			tim7_20ms_flag=1;
+		}
+		if(tim7_100ms_count==100)
+		{
+			tim7_100ms_count = 0;
+			tim7_100ms_flag = 1;
 		}
 	}
 
