@@ -137,9 +137,10 @@ int main(void)
 	unsigned char buf_read[16] = {0};
 	unsigned char buf_write[20] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16};
 	unsigned short adcVal;
-	unsigned short test1;
-	unsigned short test2;
 	short gyro_x_offset = -39, gyro_y_offset = -7, gyro_z_offset = -5;
+
+	unsigned char motor_arming_flag = 0;
+	unsigned short iBus_SwA_Prev = 0;
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -337,87 +338,79 @@ int main(void)
 	  printf("\nAll gains OK!\n\n");
   }
 
-//  while(Is_iBus_Received() == 0)
-//  {
-//	  LL_TIM_CC_EnableChannel(TIM3, LL_TIM_CHANNEL_CH4);
-//
-//	  TIM3->PSC=3000;
-//	  HAL_Delay(200);
-//	  LL_TIM_CC_DisableChannel(TIM3, LL_TIM_CHANNEL_CH4);
-//	  HAL_Delay(200);
-//  }
-//  if(iBus.SwC == 2000)
-//  {
-//	  LL_TIM_CC_EnableChannel(TIM3, LL_TIM_CHANNEL_CH4);
-//
-//	  TIM3->PSC = 1500;
-//	  HAL_Delay(200);
-//	  TIM3->PSC = 2000;
-//	  HAL_Delay(200);
-//	  TIM3->PSC = 1500;
-//	  HAL_Delay(200);
-//	  TIM3->PSC = 2000;
-//	  HAL_Delay(200);
-//	  LL_TIM_CC_DisableChannel(TIM3, LL_TIM_CHANNEL_CH4);
-//
-//	  ESC_Calibration();
-//	  while(iBus.SwC != 1000)
-//	  {
-//		  Is_iBus_Received();
-//		  LL_TIM_CC_EnableChannel(TIM3, LL_TIM_CHANNEL_CH4);
-//
-//		  TIM3->PSC = 1500;
-//		  HAL_Delay(200);
-//		  TIM3->PSC = 2000;
-//		  HAL_Delay(200);
-//		  LL_TIM_CC_DisableChannel(TIM3, LL_TIM_CHANNEL_CH4);
-//	  }
-//  }
-//  else if(iBus.SwC == 1500)
-//  {
-//	  LL_TIM_CC_EnableChannel(TIM3, LL_TIM_CHANNEL_CH4);
-//
-//	  TIM3->PSC = 1500;
-//	  HAL_Delay(200);
-//	  TIM3->PSC = 2000;
-//	  HAL_Delay(200);
-//	  TIM3->PSC = 1500;
-//	  HAL_Delay(200);
-//	  TIM3->PSC = 2000;
-//	  HAL_Delay(200);
-//	  LL_TIM_CC_DisableChannel(TIM3, LL_TIM_CHANNEL_CH4);
-//
-//	  BNO080_Calibration();
-//	  while(iBus.SwC != 1000)
-//	  {
-//		  Is_iBus_Received();
-//		  LL_TIM_CC_EnableChannel(TIM3, LL_TIM_CHANNEL_CH4);
-//
-//		  TIM3->PSC = 1500;
-//		  HAL_Delay(200);
-//		  TIM3->PSC = 2000;
-//		  HAL_Delay(200);
-//		  LL_TIM_CC_DisableChannel(TIM3, LL_TIM_CHANNEL_CH4);
-//	  }
-//  }
-//
-//  while(Is_iBus_Throttle_Min() == 0)
-//  {
-//	  LL_TIM_CC_EnableChannel(TIM3, LL_TIM_CHANNEL_CH4);
-//
-//	  TIM3->PSC = 1000;
-//	  HAL_Delay(70);
-//	  LL_TIM_CC_DisableChannel(TIM3, LL_TIM_CHANNEL_CH4);
-//	  HAL_Delay(70);
-//  }
+  while(Is_iBus_Received() == 0)
+  {
+	  LL_TIM_CC_EnableChannel(TIM3, LL_TIM_CHANNEL_CH4);
 
-//  // EEPROM Read Write Test
-//  EP_PIDGain_Write(0, 1.1, 2.2, 3.3);
-//  float p = 0.0, i = 0.0, d = 0.0;
-//
-//  EP_PIDGain_Read(0, &p, &i, &d);
-//
-//  printf("%f %f %f", p, i, d);
+	  TIM3->PSC=3000;
+	  HAL_Delay(200);
+	  LL_TIM_CC_DisableChannel(TIM3, LL_TIM_CHANNEL_CH4);
+	  HAL_Delay(200);
+  }
+  if(iBus.SwC == 2000)
+  {
+	  LL_TIM_CC_EnableChannel(TIM3, LL_TIM_CHANNEL_CH4);
+
+	  TIM3->PSC = 1500;
+	  HAL_Delay(200);
+	  TIM3->PSC = 2000;
+	  HAL_Delay(200);
+	  TIM3->PSC = 1500;
+	  HAL_Delay(200);
+	  TIM3->PSC = 2000;
+	  HAL_Delay(200);
+	  LL_TIM_CC_DisableChannel(TIM3, LL_TIM_CHANNEL_CH4);
+
+	  ESC_Calibration();
+	  while(iBus.SwC != 1000)
+	  {
+		  Is_iBus_Received();
+		  LL_TIM_CC_EnableChannel(TIM3, LL_TIM_CHANNEL_CH4);
+
+		  TIM3->PSC = 1500;
+		  HAL_Delay(200);
+		  TIM3->PSC = 2000;
+		  HAL_Delay(200);
+		  LL_TIM_CC_DisableChannel(TIM3, LL_TIM_CHANNEL_CH4);
+	  }
+  }
+  else if(iBus.SwC == 1500)
+  {
+	  LL_TIM_CC_EnableChannel(TIM3, LL_TIM_CHANNEL_CH4);
+
+	  TIM3->PSC = 1500;
+	  HAL_Delay(200);
+	  TIM3->PSC = 2000;
+	  HAL_Delay(200);
+	  TIM3->PSC = 1500;
+	  HAL_Delay(200);
+	  TIM3->PSC = 2000;
+	  HAL_Delay(200);
+	  LL_TIM_CC_DisableChannel(TIM3, LL_TIM_CHANNEL_CH4);
+
+	  BNO080_Calibration();
+	  while(iBus.SwC != 1000)
+	  {
+		  Is_iBus_Received();
+		  LL_TIM_CC_EnableChannel(TIM3, LL_TIM_CHANNEL_CH4);
+
+		  TIM3->PSC = 1500;
+		  HAL_Delay(200);
+		  TIM3->PSC = 2000;
+		  HAL_Delay(200);
+		  LL_TIM_CC_DisableChannel(TIM3, LL_TIM_CHANNEL_CH4);
+	  }
+  }
+
+  while(Is_iBus_Throttle_Min() == 0 || iBus.SwA == 2000) // Protect from switch A in driving mode when booting
+  {
+	  LL_TIM_CC_EnableChannel(TIM3, LL_TIM_CHANNEL_CH4);
+
+	  TIM3->PSC = 1000;
+	  HAL_Delay(70);
+	  LL_TIM_CC_DisableChannel(TIM3, LL_TIM_CHANNEL_CH4);
+	  HAL_Delay(70);
+  }
 
   LL_TIM_CC_EnableChannel(TIM3, LL_TIM_CHANNEL_CH4);
 
@@ -430,7 +423,7 @@ int main(void)
 
   LL_TIM_CC_DisableChannel(TIM3, LL_TIM_CHANNEL_CH4);
 
-  //printf("Start\n");
+  printf("Start\n");
 
   /* USER CODE END 2 */
 
@@ -441,6 +434,46 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+	  // Motor PWM Control - Arming
+	  if (iBus.SwA == 2000 && iBus_SwA_Prev != 2000) // a little bit motor driving in order to alert arming mode to user when switch A is on
+	  {
+		  if (iBus.LV < 1010)
+		  {
+			  motor_arming_flag = 1;
+		  }
+		  else // buzzer
+		  {
+			  LL_TIM_CC_EnableChannel(TIM3, LL_TIM_CHANNEL_CH4);
+
+			  TIM3->PSC = 1000;
+			  HAL_Delay(70);
+			  LL_TIM_CC_DisableChannel(TIM3, LL_TIM_CHANNEL_CH4);
+			  HAL_Delay(70);
+		  }
+	  }
+	  iBus_SwA_Prev = iBus.SwA;
+
+	  if (iBus.SwA != 2000) //Disarming
+	  {
+		  // motor stop
+		  motor_arming_flag = 0;
+	  }
+
+	  if (motor_arming_flag == 1)
+	  {
+		  TIM5->CCR1 = 10500 + 500 + (iBus.LV - 1000) * 10.5f;
+		  TIM5->CCR2 = 10500 + 500 + (iBus.LV - 1000) * 10.5f;
+		  TIM5->CCR3 = 10500 + 500 + (iBus.LV - 1000) * 10.5f;
+		  TIM5->CCR4 = 10500 + 500 + (iBus.LV - 1000) * 10.5f;
+	  }
+	  else
+	  {
+		  TIM5->CCR1 = 10500;
+		  TIM5->CCR2 = 10500;
+		  TIM5->CCR3 = 10500;
+		  TIM5->CCR4 = 10500;
+	  }
+
 	  if(telemetry_rx_cplt_flag == 1) //Receive GCS Message
 	  {
 		  telemetry_rx_cplt_flag = 0;
