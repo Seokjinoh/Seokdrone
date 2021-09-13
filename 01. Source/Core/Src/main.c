@@ -37,6 +37,7 @@
 #include "M8N.h"
 #include "FS-iA6B.h"
 #include "AT24C08.h"
+#include <string.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -78,7 +79,33 @@ extern uint8_t tim7_20ms_flag;
 extern uint8_t tim7_100ms_flag;
 
 uint8_t telemetry_tx_buf[40];
+uint8_t telemetry_rx_buf[20];
+uint8_t telemetry_rx_cplt_flag;
 float batVolt;
+
+float roll_in_kp;
+float roll_in_ki;
+float roll_in_kd;
+
+float roll_out_kp;
+float roll_out_ki;
+float roll_out_kd;
+
+float pitch_in_kp;
+float pitch_in_ki;
+float pitch_in_kd;
+
+float pitch_out_kp;
+float pitch_out_ki;
+float pitch_out_kd;
+
+float yaw_heading_kp;
+float yaw_heading_ki;
+float yaw_heading_kd;
+
+float yaw_rate_kp;
+float yaw_rate_ki;
+float yaw_rate_kd;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -90,6 +117,7 @@ int Is_iBus_Received(void);
 void BNO080_Calibration(void);
 void Encode_Msg_AHRS(unsigned char* telemetry_tx_buf);
 void Encode_Msg_GPS(unsigned char* telemetry_tx_buf);
+void Encode_Msg_PID_Gain(unsigned char* telemetry_tx_buf, unsigned char id, float p, float i, float d);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -169,7 +197,7 @@ int main(void)
 
   //after calling this func at this point, callback function of rxreceived will start to be called when UART RX received.
   //so, this line is just a preparation... (nothing received here, of course)
-  // GCS ?�� PC 3DR Telemetry UART
+  // GCS - PC 3DR Telemetry UART
   HAL_UART_Receive_IT(&huart1, &uart1_rx_data, 1);
 
   LL_TIM_EnableCounter(TIM7);
@@ -185,6 +213,29 @@ int main(void)
   ICM20602_Writebyte(0x17, (gyro_z_offset*-2)>>8);
   ICM20602_Writebyte(0x18, (gyro_z_offset*-2));
 
+  EP_PIDGain_Read(0, &roll_in_kp, &roll_in_ki, &roll_in_kd);
+  Encode_Msg_PID_Gain(&telemetry_tx_buf[0], 0, roll_in_kp, roll_in_ki, roll_in_kd);
+  HAL_UART_Transmit(&huart1, &telemetry_tx_buf[0], 20, 10);
+
+  EP_PIDGain_Read(1, &roll_out_kp, &roll_out_ki, &roll_out_kd);
+  Encode_Msg_PID_Gain(&telemetry_tx_buf[0], 1, roll_out_kp, roll_out_ki, roll_out_kd);
+  HAL_UART_Transmit(&huart1, &telemetry_tx_buf[0], 20, 10);
+
+  EP_PIDGain_Read(2, &pitch_in_kp, &pitch_in_ki, &pitch_in_kd);
+  Encode_Msg_PID_Gain(&telemetry_tx_buf[0], 2, pitch_in_kp, pitch_in_ki, pitch_in_kd);
+  HAL_UART_Transmit(&huart1, &telemetry_tx_buf[0], 20, 10);
+
+  EP_PIDGain_Read(3, &pitch_out_kp, &pitch_out_ki, &pitch_out_kd);
+  Encode_Msg_PID_Gain(&telemetry_tx_buf[0], 3, pitch_out_kp, pitch_out_ki, pitch_out_kd);
+  HAL_UART_Transmit(&huart1, &telemetry_tx_buf[0], 20, 10);
+
+  EP_PIDGain_Read(4, &yaw_heading_kp, &yaw_heading_ki, &yaw_heading_kd);
+  Encode_Msg_PID_Gain(&telemetry_tx_buf[0], 4, yaw_heading_kp, yaw_heading_ki, yaw_heading_kd);
+  HAL_UART_Transmit(&huart1, &telemetry_tx_buf[0], 20, 10);
+
+  EP_PIDGain_Read(5, &yaw_rate_kp, &yaw_rate_ki, &yaw_rate_kd);
+  Encode_Msg_PID_Gain(&telemetry_tx_buf[0], 5, yaw_rate_kp, yaw_rate_ki, yaw_rate_kd);
+  HAL_UART_Transmit(&huart1, &telemetry_tx_buf[0], 20, 10);
 //  while(Is_iBus_Received() == 0)
 //  {
 //	  LL_TIM_CC_EnableChannel(TIM3, LL_TIM_CHANNEL_CH4);
@@ -289,6 +340,129 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+	  if(telemetry_rx_cplt_flag == 1) //Receive GCS Message
+	  {
+		  telemetry_rx_cplt_flag = 0;
+
+		  if(iBus.SwA == 1000) //Check FS-i6 Switch A
+		  {
+			  unsigned char chksum = 0xff;
+			  for(int i=0;i<19;i++) chksum = chksum - telemetry_rx_buf[i];
+
+			  if(chksum == telemetry_rx_buf[19]) //Check checksum of GCS Message
+			  {
+				  LL_TIM_CC_EnableChannel(TIM3, LL_TIM_CHANNEL_CH4);
+
+				  TIM3->PSC = 1000;
+				  HAL_Delay(10);
+
+				  LL_TIM_CC_DisableChannel(TIM3, LL_TIM_CHANNEL_CH4);
+
+				  switch(telemetry_rx_buf[2]) //Check ID of GCS Message
+				  {
+				  case 0:
+					  roll_in_kp = *(float*)&telemetry_rx_buf[3];
+					  roll_in_ki = *(float*)&telemetry_rx_buf[7];
+					  roll_in_kd = *(float*)&telemetry_rx_buf[11];
+					  EP_PIDGain_Write(telemetry_rx_buf[2], 3, 4, 5);
+					  EP_PIDGain_Read(telemetry_rx_buf[2], &roll_in_kp, &roll_in_ki, &roll_in_kd);
+					  Encode_Msg_PID_Gain(&telemetry_tx_buf[0], telemetry_rx_buf[2], roll_in_kp, roll_in_ki, roll_in_kd);
+					  HAL_UART_Transmit_IT(&huart1, &telemetry_tx_buf[0], 20);
+					  break;
+				  case 1:
+					  roll_out_kp = *(float*)&telemetry_rx_buf[3];
+					  roll_out_ki = *(float*)&telemetry_rx_buf[7];
+					  roll_out_kd = *(float*)&telemetry_rx_buf[11];
+					  EP_PIDGain_Write(telemetry_rx_buf[2], roll_out_kp, roll_out_ki, roll_out_kd);
+					  EP_PIDGain_Read(telemetry_rx_buf[2], &roll_out_kp, &roll_out_ki, &roll_out_kd);
+					  Encode_Msg_PID_Gain(&telemetry_tx_buf[0], telemetry_rx_buf[2], roll_out_kp, roll_out_ki, roll_out_kd);
+					  HAL_UART_Transmit_IT(&huart1, &telemetry_tx_buf[0], 20);
+					  break;
+				  case 2:
+					  pitch_in_kp = *(float*)&telemetry_rx_buf[3];
+					  pitch_in_ki = *(float*)&telemetry_rx_buf[7];
+					  pitch_in_kd = *(float*)&telemetry_rx_buf[11];
+					  EP_PIDGain_Write(telemetry_rx_buf[2], pitch_in_kp, pitch_in_ki, pitch_in_kd);
+					  EP_PIDGain_Read(telemetry_rx_buf[2], &pitch_in_kp, &pitch_in_ki, &pitch_in_kd);
+					  Encode_Msg_PID_Gain(&telemetry_tx_buf[0], telemetry_rx_buf[2], pitch_in_kp, pitch_in_ki, pitch_in_kd);
+					  HAL_UART_Transmit_IT(&huart1, &telemetry_tx_buf[0], 20);
+					  break;
+				  case 3:
+					  pitch_out_kp = *(float*)&telemetry_rx_buf[3];
+					  pitch_out_ki = *(float*)&telemetry_rx_buf[7];
+					  pitch_out_kd = *(float*)&telemetry_rx_buf[11];
+					  EP_PIDGain_Write(telemetry_rx_buf[2], pitch_out_kp, pitch_out_ki, pitch_out_kd);
+					  EP_PIDGain_Read(telemetry_rx_buf[2], &pitch_out_kp, &pitch_out_ki, &pitch_out_kd);
+					  Encode_Msg_PID_Gain(&telemetry_tx_buf[0], telemetry_rx_buf[2], pitch_out_kp, pitch_out_ki, pitch_out_kd);
+					  HAL_UART_Transmit_IT(&huart1, &telemetry_tx_buf[0], 20);
+					  break;
+				  case 4:
+					  yaw_heading_kp = *(float*)&telemetry_rx_buf[3];
+					  yaw_heading_ki = *(float*)&telemetry_rx_buf[7];
+					  yaw_heading_kd = *(float*)&telemetry_rx_buf[11];
+					  EP_PIDGain_Write(telemetry_rx_buf[2], yaw_heading_kp, yaw_heading_ki, yaw_heading_kd);
+					  EP_PIDGain_Read(telemetry_rx_buf[2], &yaw_heading_kp, &yaw_heading_ki, &yaw_heading_kd);
+					  Encode_Msg_PID_Gain(&telemetry_tx_buf[0], telemetry_rx_buf[2], yaw_heading_kp, yaw_heading_ki, yaw_heading_kd);
+					  HAL_UART_Transmit_IT(&huart1, &telemetry_tx_buf[0], 20);
+					  break;
+				  case 5:
+					  yaw_rate_kp = *(float*)&telemetry_rx_buf[3];
+					  yaw_rate_ki = *(float*)&telemetry_rx_buf[7];
+					  yaw_rate_kd = *(float*)&telemetry_rx_buf[11];
+					  EP_PIDGain_Write(telemetry_rx_buf[2], yaw_rate_kp, yaw_rate_ki, yaw_rate_kd);
+					  EP_PIDGain_Read(telemetry_rx_buf[2], &yaw_rate_kp, &yaw_rate_ki, &yaw_rate_kd);
+					  Encode_Msg_PID_Gain(&telemetry_tx_buf[0], telemetry_rx_buf[2], yaw_rate_kp, yaw_rate_ki, yaw_rate_kd);
+					  HAL_UART_Transmit_IT(&huart1, &telemetry_tx_buf[0], 20);
+					  break;
+				  case 0x10:
+					  switch(telemetry_rx_buf[3]) //Check PID Gain ID of GCS PID Gain Request Message
+					  {
+					  case 0:
+						  Encode_Msg_PID_Gain(&telemetry_tx_buf[0], telemetry_rx_buf[3], roll_in_kp, roll_in_ki, roll_in_kd);
+						  HAL_UART_Transmit(&huart1, &telemetry_tx_buf[0], 20, 10);
+						  break;
+					  case 1:
+						  Encode_Msg_PID_Gain(&telemetry_tx_buf[0], telemetry_rx_buf[3], roll_out_kp, roll_out_ki, roll_out_kd);
+						  HAL_UART_Transmit(&huart1, &telemetry_tx_buf[0], 20, 10);
+						  break;
+					  case 2:
+						  Encode_Msg_PID_Gain(&telemetry_tx_buf[0], telemetry_rx_buf[3], pitch_in_kp, pitch_in_ki, pitch_in_kd);
+						  HAL_UART_Transmit(&huart1, &telemetry_tx_buf[0], 20, 10);
+						  break;
+					  case 3:
+						  Encode_Msg_PID_Gain(&telemetry_tx_buf[0], telemetry_rx_buf[3], pitch_out_kp, pitch_out_ki, pitch_out_kd);
+						  HAL_UART_Transmit(&huart1, &telemetry_tx_buf[0], 20, 10);
+						  break;
+					  case 4:
+						  Encode_Msg_PID_Gain(&telemetry_tx_buf[0], telemetry_rx_buf[3], yaw_heading_kp, yaw_heading_ki, yaw_heading_kd);
+						  HAL_UART_Transmit(&huart1, &telemetry_tx_buf[0], 20, 10);
+						  break;
+					  case 5:
+						  Encode_Msg_PID_Gain(&telemetry_tx_buf[0], telemetry_rx_buf[3], yaw_rate_kp, yaw_rate_ki, yaw_rate_kd);
+						  HAL_UART_Transmit(&huart1, &telemetry_tx_buf[0], 20, 10);
+						  break;
+					  case 6:
+						  Encode_Msg_PID_Gain(&telemetry_tx_buf[0], 0, roll_in_kp, roll_in_ki, roll_in_kd);
+						  HAL_UART_Transmit(&huart1, &telemetry_tx_buf[0], 20, 10);
+						  Encode_Msg_PID_Gain(&telemetry_tx_buf[0], 1, roll_out_kp, roll_out_ki, roll_out_kd);
+						  HAL_UART_Transmit(&huart1, &telemetry_tx_buf[0], 20, 10);
+						  Encode_Msg_PID_Gain(&telemetry_tx_buf[0], 2, pitch_in_kp, pitch_in_ki, pitch_in_kd);
+						  HAL_UART_Transmit(&huart1, &telemetry_tx_buf[0], 20, 10);
+						  Encode_Msg_PID_Gain(&telemetry_tx_buf[0], 3, pitch_out_kp, pitch_out_ki, pitch_out_kd);
+						  HAL_UART_Transmit(&huart1, &telemetry_tx_buf[0], 20, 10);
+						  Encode_Msg_PID_Gain(&telemetry_tx_buf[0], 4, yaw_heading_kp, yaw_heading_ki, yaw_heading_kd);
+						  HAL_UART_Transmit(&huart1, &telemetry_tx_buf[0], 20, 10);
+						  Encode_Msg_PID_Gain(&telemetry_tx_buf[0], 5, yaw_rate_kp, yaw_rate_ki, yaw_rate_kd);
+						  HAL_UART_Transmit(&huart1, &telemetry_tx_buf[0], 20, 10);
+						  break;
+					  }
+					  break;
+
+				  }
+			  }
+		  }
+	  }
+
 	  if(tim7_20ms_flag == 1 && tim7_100ms_flag != 1) // To handle non-blocking methond (Transmit_IT)
 	  {
 		  tim7_20ms_flag = 0;
@@ -302,10 +476,10 @@ int main(void)
 		  tim7_20ms_flag = 0;
 		  tim7_100ms_flag = 0;
 
-		  //Encode_Msg_AHRS(&telemetry_tx_buf[0]);
-		  Encode_Msg_GPS(&telemetry_tx_buf[0]);
+		  Encode_Msg_AHRS(&telemetry_tx_buf[0]);
+		  Encode_Msg_GPS(&telemetry_tx_buf[20]);
 
-		  HAL_UART_Transmit_IT(&huart1, &telemetry_tx_buf[0], 20);
+		  HAL_UART_Transmit_IT(&huart1, &telemetry_tx_buf[0], 40);
 	  }
 
 	  batVolt = adcVal * 0.003619f;
@@ -609,10 +783,41 @@ void BNO080_Calibration(void)
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
 	// GCS
+	static unsigned char cnt = 0;
+
 	if(huart->Instance == USART1)
 	{
 		// receive data to second argument, uart1_rx_data
 		HAL_UART_Receive_IT(&huart1, &uart1_rx_data, 1);
+
+		switch(cnt)
+		{
+		case 0:
+			if(uart1_rx_data == 0x47)
+			{
+				telemetry_rx_buf[cnt] = uart1_rx_data;
+				cnt++;
+			}
+			break;
+		case 1:
+			if(uart1_rx_data == 0x53)
+			{
+				telemetry_rx_buf[cnt] = uart1_rx_data;
+				cnt++;
+			}
+			else
+				cnt = 0;
+			break;
+		case 19:
+			telemetry_rx_buf[cnt] = uart1_rx_data;
+			cnt = 0;
+			telemetry_rx_cplt_flag = 1;
+			break;
+		default:
+			telemetry_rx_buf[cnt] = uart1_rx_data;
+			cnt++;
+			break;
+		}
 	}
 }
 
@@ -644,8 +849,8 @@ void Encode_Msg_AHRS(unsigned char* telemetry_tx_buf)
 	  telemetry_tx_buf[15] = (unsigned short)((iBus.LH-1000)*0.36f*100);
 	  telemetry_tx_buf[16] = ((unsigned short)((iBus.LH-1000)*0.36f*100))>>8;
 
-	  telemetry_tx_buf[17] = 0x00;
-	  telemetry_tx_buf[18] = 0x00;
+	  telemetry_tx_buf[17] = (short)(iBus.LV*10);
+	  telemetry_tx_buf[18] = ((short)(iBus.LV*10))>>8;
 
 	  telemetry_tx_buf[19] = 0xff;
 
@@ -680,6 +885,36 @@ void Encode_Msg_GPS(unsigned char* telemetry_tx_buf)
 
 	  telemetry_tx_buf[15] = iBus_isActiveFailsafe(&iBus);
 
+	  telemetry_tx_buf[16] = 0x00;
+	  telemetry_tx_buf[17] = 0x00;
+	  telemetry_tx_buf[18] = 0x00;
+
+	  telemetry_tx_buf[19] = 0xff;
+
+	  for (int i = 0; i < 19; i++)
+	  {
+		  telemetry_tx_buf[19] = telemetry_tx_buf[19] - telemetry_tx_buf[i];
+	  }
+}
+
+void Encode_Msg_PID_Gain(unsigned char* telemetry_tx_buf, unsigned char id, float p, float i, float d)
+{
+	  telemetry_tx_buf[0] = 0x46;
+	  telemetry_tx_buf[1] = 0x43;
+
+	  telemetry_tx_buf[2] = id;
+
+	  // method 1. using memcpy
+//	  memcpy(&telemetry_tx_buf[3], &p, 4);
+//	  memcpy(&telemetry_tx_buf[7], &i, 4);
+//	  memcpy(&telemetry_tx_buf[11], &d, 4);
+
+	  // method 2. using pointer address forward
+	  *(float*)&telemetry_tx_buf[3] = p;
+	  *(float*)&telemetry_tx_buf[7] = i;
+	  *(float*)&telemetry_tx_buf[11] = d;
+
+	  telemetry_tx_buf[15] = 0x00;
 	  telemetry_tx_buf[16] = 0x00;
 	  telemetry_tx_buf[17] = 0x00;
 	  telemetry_tx_buf[18] = 0x00;
