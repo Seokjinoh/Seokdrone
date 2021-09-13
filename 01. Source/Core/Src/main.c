@@ -174,34 +174,118 @@ int main(void)
   MX_USART1_UART_Init();
   MX_TIM7_Init();
   /* USER CODE BEGIN 2 */
-  LL_TIM_EnableCounter(TIM3);
+  LL_TIM_EnableCounter(TIM3); // Buzzer
 
-  LL_USART_EnableIT_RXNE(USART6);
-  LL_USART_EnableIT_RXNE(UART4);
-  LL_USART_EnableIT_RXNE(UART5);
+  LL_USART_EnableIT_RXNE(USART6); // Debug UART
+  LL_USART_EnableIT_RXNE(UART4); // GPS
+  LL_USART_EnableIT_RXNE(UART5); // FS-iA6B
 
-  BNO080_Initialization();
-  BNO080_enableGameRotationVector(2500); // 400 times per sec
-
-  ICM20602_Initialization();
-  LPS22HH_Initialization();
-  M8N_UBX_Initialization();
-
-  LL_TIM_EnableCounter(TIM5);
+  LL_TIM_EnableCounter(TIM5); // Motor PWM
   LL_TIM_CC_EnableChannel(TIM5, LL_TIM_CHANNEL_CH1);
   LL_TIM_CC_EnableChannel(TIM5, LL_TIM_CHANNEL_CH2);
   LL_TIM_CC_EnableChannel(TIM5, LL_TIM_CHANNEL_CH3);
   LL_TIM_CC_EnableChannel(TIM5, LL_TIM_CHANNEL_CH4);
 
-  HAL_ADC_Start_DMA(&hadc1, &adcVal, 1);
+  HAL_ADC_Start_DMA(&hadc1, &adcVal, 1); // Battery ADC
 
   //after calling this func at this point, callback function of rxreceived will start to be called when UART RX received.
   //so, this line is just a preparation... (nothing received here, of course)
   // GCS - PC 3DR Telemetry UART
-  HAL_UART_Receive_IT(&huart1, &uart1_rx_data, 1);
+  HAL_UART_Receive_IT(&huart1, &uart1_rx_data, 1); // Telemetry
 
-  LL_TIM_EnableCounter(TIM7);
+  LL_TIM_EnableCounter(TIM7); // 10Hz, 50Hz, 1kHz loop
   LL_TIM_EnableIT_UPDATE(TIM7);
+
+  TIM3->PSC = 1000;
+  LL_TIM_CC_EnableChannel(TIM3, LL_TIM_CHANNEL_CH4);
+  HAL_Delay(60);
+  LL_TIM_CC_DisableChannel(TIM3, LL_TIM_CHANNEL_CH4);
+  HAL_Delay(60);
+  LL_TIM_CC_EnableChannel(TIM3, LL_TIM_CHANNEL_CH4);
+  HAL_Delay(60);
+  LL_TIM_CC_DisableChannel(TIM3, LL_TIM_CHANNEL_CH4);
+  HAL_Delay(60);
+  printf("Checking sensor connection..\n");
+
+
+  if(BNO080_Initialization() != 0)
+  {
+	  LL_TIM_CC_EnableChannel(TIM3, LL_TIM_CHANNEL_CH4);
+
+	  TIM3->PSC = 1000;
+	  HAL_Delay(100);
+	  TIM3->PSC=1500;
+	  HAL_Delay(100);
+	  TIM3->PSC=2000;
+	  HAL_Delay(100);
+
+	  LL_TIM_CC_DisableChannel(TIM3, LL_TIM_CHANNEL_CH4);
+
+	  printf("\nBNO080 failed. Program shutting down...");
+	  while(1)
+	  {
+		  LL_TIM_CC_DisableChannel(TIM3, LL_TIM_CHANNEL_CH4);
+		  LL_GPIO_TogglePin(GPIOC, LL_GPIO_PIN_0);
+		  HAL_Delay(200);
+		  LL_TIM_CC_EnableChannel(TIM3, LL_TIM_CHANNEL_CH4);
+		  LL_GPIO_TogglePin(GPIOC, LL_GPIO_PIN_0);
+		  HAL_Delay(200);
+	  }
+  }
+  BNO080_enableGameRotationVector(2500); // 400 times per sec
+
+  if(ICM20602_Initialization() != 0)
+  {
+	  LL_TIM_CC_EnableChannel(TIM3, LL_TIM_CHANNEL_CH4);
+
+	  TIM3->PSC = 1000;
+	  HAL_Delay(100);
+	  TIM3->PSC=1500;
+	  HAL_Delay(100);
+	  TIM3->PSC=2000;
+	  HAL_Delay(100);
+
+	  LL_TIM_CC_DisableChannel(TIM3, LL_TIM_CHANNEL_CH4);
+
+	  printf("\nICM20602 failed. Program shutting down...");
+	  while(1)
+	  {
+		  LL_TIM_CC_DisableChannel(TIM3, LL_TIM_CHANNEL_CH4);
+		  LL_GPIO_TogglePin(GPIOC, LL_GPIO_PIN_1);
+		  HAL_Delay(200);
+		  LL_TIM_CC_EnableChannel(TIM3, LL_TIM_CHANNEL_CH4);
+		  LL_GPIO_TogglePin(GPIOC, LL_GPIO_PIN_1);
+		  HAL_Delay(200);
+	  }
+  }
+  if(LPS22HH_Initialization() != 0)
+  {
+	  LL_TIM_CC_EnableChannel(TIM3, LL_TIM_CHANNEL_CH4);
+
+	  TIM3->PSC = 1000;
+	  HAL_Delay(100);
+	  TIM3->PSC=1500;
+	  HAL_Delay(100);
+	  TIM3->PSC=2000;
+	  HAL_Delay(100);
+
+	  LL_TIM_CC_DisableChannel(TIM3, LL_TIM_CHANNEL_CH4);
+
+	  printf("\nLPS22HH failed. Program shutting down...");
+	  while(1)
+	  {
+		  LL_TIM_CC_DisableChannel(TIM3, LL_TIM_CHANNEL_CH4);
+		  LL_GPIO_TogglePin(GPIOC, LL_GPIO_PIN_2);
+		  HAL_Delay(200);
+		  LL_TIM_CC_EnableChannel(TIM3, LL_TIM_CHANNEL_CH4);
+		  LL_GPIO_TogglePin(GPIOC, LL_GPIO_PIN_2);
+		  HAL_Delay(200);
+	  }
+  }
+
+  printf("All sensor OK!\n\n");
+
+  M8N_UBX_Initialization();
 
   // ICM20602 offset calibration//
   // ICM20602 chip's address is organised 8bit-unit as Big Endian type
@@ -213,29 +297,46 @@ int main(void)
   ICM20602_Writebyte(0x17, (gyro_z_offset*-2)>>8);
   ICM20602_Writebyte(0x18, (gyro_z_offset*-2));
 
-  EP_PIDGain_Read(0, &roll_in_kp, &roll_in_ki, &roll_in_kd);
-  Encode_Msg_PID_Gain(&telemetry_tx_buf[0], 0, roll_in_kp, roll_in_ki, roll_in_kd);
-  HAL_UART_Transmit(&huart1, &telemetry_tx_buf[0], 20, 10);
+  printf("Loading PID Gain...\n");
 
-  EP_PIDGain_Read(1, &roll_out_kp, &roll_out_ki, &roll_out_kd);
-  Encode_Msg_PID_Gain(&telemetry_tx_buf[0], 1, roll_out_kp, roll_out_ki, roll_out_kd);
-  HAL_UART_Transmit(&huart1, &telemetry_tx_buf[0], 20, 10);
+  if(EP_PIDGain_Read(0, &roll_in_kp, &roll_in_ki, &roll_in_kd) != 0 ||
+		  EP_PIDGain_Read(1, &roll_out_kp, &roll_out_ki, &roll_out_kd) != 0 ||
+		  EP_PIDGain_Read(2, &pitch_in_kp, &pitch_in_ki, &pitch_in_kd) != 0 ||
+		  EP_PIDGain_Read(3, &pitch_out_kp, &pitch_out_ki, &pitch_out_kd) != 0 ||
+		  EP_PIDGain_Read(4, &yaw_heading_kp, &yaw_heading_ki, &yaw_heading_kd) != 0 ||
+		  EP_PIDGain_Read(5, &yaw_rate_kp, &yaw_rate_ki, &yaw_rate_kd) != 0)
+  {
+	  LL_TIM_CC_EnableChannel(TIM3, LL_TIM_CHANNEL_CH4);
 
-  EP_PIDGain_Read(2, &pitch_in_kp, &pitch_in_ki, &pitch_in_kd);
-  Encode_Msg_PID_Gain(&telemetry_tx_buf[0], 2, pitch_in_kp, pitch_in_ki, pitch_in_kd);
-  HAL_UART_Transmit(&huart1, &telemetry_tx_buf[0], 20, 10);
+	  TIM3->PSC = 1000;
+	  HAL_Delay(100);
+	  TIM3->PSC=1500;
+	  HAL_Delay(100);
+	  TIM3->PSC=2000;
+	  HAL_Delay(100);
 
-  EP_PIDGain_Read(3, &pitch_out_kp, &pitch_out_ki, &pitch_out_kd);
-  Encode_Msg_PID_Gain(&telemetry_tx_buf[0], 3, pitch_out_kp, pitch_out_ki, pitch_out_kd);
-  HAL_UART_Transmit(&huart1, &telemetry_tx_buf[0], 20, 10);
+	  LL_TIM_CC_DisableChannel(TIM3, LL_TIM_CHANNEL_CH4);
 
-  EP_PIDGain_Read(4, &yaw_heading_kp, &yaw_heading_ki, &yaw_heading_kd);
-  Encode_Msg_PID_Gain(&telemetry_tx_buf[0], 4, yaw_heading_kp, yaw_heading_ki, yaw_heading_kd);
-  HAL_UART_Transmit(&huart1, &telemetry_tx_buf[0], 20, 10);
+	  HAL_Delay(500);
+	  printf("\nCouldn't load PID gain.\n");
+  }
+  else
+  {
+	  Encode_Msg_PID_Gain(&telemetry_tx_buf[0], 0, roll_in_kp, roll_in_ki, roll_in_kd);
+	  HAL_UART_Transmit(&huart1, &telemetry_tx_buf[0], 20, 10);
+	  Encode_Msg_PID_Gain(&telemetry_tx_buf[0], 1, roll_out_kp, roll_out_ki, roll_out_kd);
+	  HAL_UART_Transmit(&huart1, &telemetry_tx_buf[0], 20, 10);
+	  Encode_Msg_PID_Gain(&telemetry_tx_buf[0], 2, pitch_in_kp, pitch_in_ki, pitch_in_kd);
+	  HAL_UART_Transmit(&huart1, &telemetry_tx_buf[0], 20, 10);
+	  Encode_Msg_PID_Gain(&telemetry_tx_buf[0], 3, pitch_out_kp, pitch_out_ki, pitch_out_kd);
+	  HAL_UART_Transmit(&huart1, &telemetry_tx_buf[0], 20, 10);
+	  Encode_Msg_PID_Gain(&telemetry_tx_buf[0], 4, yaw_heading_kp, yaw_heading_ki, yaw_heading_kd);
+	  HAL_UART_Transmit(&huart1, &telemetry_tx_buf[0], 20, 10);
+	  Encode_Msg_PID_Gain(&telemetry_tx_buf[0], 5, yaw_rate_kp, yaw_rate_ki, yaw_rate_kd);
+	  HAL_UART_Transmit(&huart1, &telemetry_tx_buf[0], 20, 10);
+	  printf("\nAll gains OK!\n\n");
+  }
 
-  EP_PIDGain_Read(5, &yaw_rate_kp, &yaw_rate_ki, &yaw_rate_kd);
-  Encode_Msg_PID_Gain(&telemetry_tx_buf[0], 5, yaw_rate_kp, yaw_rate_ki, yaw_rate_kd);
-  HAL_UART_Transmit(&huart1, &telemetry_tx_buf[0], 20, 10);
 //  while(Is_iBus_Received() == 0)
 //  {
 //	  LL_TIM_CC_EnableChannel(TIM3, LL_TIM_CHANNEL_CH4);
